@@ -1,2 +1,2 @@
 # Pixel-Planet-Classic-Archive
-Pixel Planet Classic source code, for archival purposes. The code and assets may be freely examined by anyone. Redistribution is only allowed if NONE of the original assets are used.
+Pixel Planet Classic source code, for archival purposes. The code and assets may be freely examined by anyone. Any existing issues with the code and assets will not be fixed. Redistribution is only allowed if NONE of the original assets are used.
