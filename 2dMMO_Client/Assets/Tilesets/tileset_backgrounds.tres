@@ -1,0 +1,88 @@
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://i8w22hycyp1d"]
+
+[ext_resource type="Texture2D" uid="uid://l8sxc6o3pqn2" path="res://Assets/Sprites/Blocks/Dirt_Background.png" id="1_2gnho"]
+[ext_resource type="Texture2D" uid="uid://bg1jfoxk0e6t2" path="res://Assets/Sprites/Blocks/red_brick_background.png" id="1_7aq73"]
+[ext_resource type="Texture2D" uid="uid://waxipp1trhrj" path="res://Assets/Sprites/Blocks/gray_brick_background.png" id="3_8st4b"]
+[ext_resource type="Texture2D" uid="uid://5xa8c85k11ux" path="res://Assets/Sprites/Blocks/dungeon_brick_background.png" id="4_ps83q"]
+[ext_resource type="Texture2D" uid="uid://j6bt0lifxbqf" path="res://Assets/Sprites/Blocks/neon_grid_background.png" id="5_w11r6"]
+[ext_resource type="Texture2D" uid="uid://da35wclmro4bl" path="res://Assets/Sprites/Blocks/blue_scifi_grid_background.png" id="6_ynl16"]
+[ext_resource type="Texture2D" uid="uid://bagcsgdy2arux" path="res://Assets/Sprites/Blocks/orange_scifi_grid_background.png" id="7_kptck"]
+[ext_resource type="Texture2D" uid="uid://nqmul5a5ytc2" path="res://Assets/Sprites/Blocks/purple_scifi_grid_background.png" id="8_ofkqg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0dch"]
+texture = ExtResource("1_2gnho")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qjnw"]
+texture = ExtResource("3_8st4b")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oa4qf"]
+texture = ExtResource("4_ps83q")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kedl4"]
+texture = ExtResource("5_w11r6")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lajl7"]
+texture = ExtResource("6_ynl16")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1naww"]
+texture = ExtResource("7_kptck")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mdvd"]
+texture = ExtResource("8_ofkqg")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5mn7"]
+texture = ExtResource("1_7aq73")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_s0dch")
+sources/2 = SubResource("TileSetAtlasSource_1qjnw")
+sources/3 = SubResource("TileSetAtlasSource_oa4qf")
+sources/4 = SubResource("TileSetAtlasSource_kedl4")
+sources/5 = SubResource("TileSetAtlasSource_lajl7")
+sources/6 = SubResource("TileSetAtlasSource_1naww")
+sources/8 = SubResource("TileSetAtlasSource_7mdvd")
+sources/9 = SubResource("TileSetAtlasSource_a5mn7")

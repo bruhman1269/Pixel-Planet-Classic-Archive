@@ -1,0 +1,115 @@
+[
+    {
+        "INGREDIENT_1": [1, 1],
+        "INGREDIENT_2": [2, 1],
+        "RESULT": [12, 1]
+    },
+
+    {
+        "INGREDIENT_1": [167, 50],
+        "INGREDIENT_2": [161, 1],
+        "RESULT": [72, 1]
+    },
+
+    {
+        "INGREDIENT_1": [167, 50],
+        "INGREDIENT_2": [168, 3],
+        "RESULT": [166, 1]
+    },
+
+    {
+        "INGREDIENT_1": [135, 1],
+        "INGREDIENT_2": [134, 1],
+        "RESULT": [163, 1]
+    },
+
+    {
+        "INGREDIENT_1": [139, 1],
+        "INGREDIENT_2": [140, 1],
+        "RESULT": [164, 1]
+    },
+
+    {
+        "INGREDIENT_1": [119, 1],
+        "INGREDIENT_2": [161, 1],
+        "RESULT": [162, 1]
+    },
+
+    {
+        "INGREDIENT_1": [54, 1],
+        "INGREDIENT_2": [161, 1],
+        "RESULT": [165, 1]
+    },
+
+    {
+        "INGREDIENT_1": [20, 1],
+        "INGREDIENT_2": [135, 50],
+        "RESULT": [154, 1]
+    },
+
+    {
+        "INGREDIENT_1": [20, 1],
+        "INGREDIENT_2": [134, 50],
+        "RESULT": [155, 1]
+    },
+
+    {
+        "INGREDIENT_1": [176, 1],
+        "INGREDIENT_2": [172, 1],
+        "RESULT": [171, 1]
+    },
+
+    {
+        "INGREDIENT_1": [180, 100],
+        "INGREDIENT_2": [167, 50],
+        "RESULT": [177, 1]
+    },
+
+    {
+        "INGREDIENT_1": [177, 2],
+        "INGREDIENT_2": [178, 50],
+        "RESULT": [175, 1]
+    },
+
+    {
+        "INGREDIENT_1": [177, 2],
+        "INGREDIENT_2": [178, 50],
+        "RESULT": [175, 1]
+    },
+
+    {
+        "INGREDIENT_1": [179, 1],
+        "INGREDIENT_2": [173, 100],
+        "RESULT": [176, 1]
+    },
+
+    {
+        "INGREDIENT_1": [184, 10],
+        "INGREDIENT_2": [182, 10],
+        "RESULT": [187, 1]
+    },
+
+    {
+        "INGREDIENT_1": [188, 5],
+        "INGREDIENT_2": [173, 5],
+        "RESULT": [182, 1]
+    },
+
+    {
+        "INGREDIENT_1": [187, 25],
+        "INGREDIENT_2": [162, 1],
+        "RESULT": [189, 1]
+    },
+
+    {
+        "INGREDIENT_1": [182, 10],
+        "INGREDIENT_2": [68, 1],
+        "RESULT": [191, 1]
+    },
+
+    {
+        "INGREDIENT_1": [195, 1],
+        "INGREDIENT_2": [192, 10],
+        "RESULT": [194, 1]
+    }
+]

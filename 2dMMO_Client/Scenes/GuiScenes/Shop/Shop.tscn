@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvmfxn3m8pvld"]
+
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Shop/Shop.gd" id="1_ivq1w"]
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_xo2df"]
+[ext_resource type="Texture2D" uid="uid://ojpplb1e4g1" path="res://Assets/Gui/Shop_Panel.png" id="2_188s6"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="3_d2m20"]
+[ext_resource type="Script" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="4_7dkkt"]
+[ext_resource type="Script" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_sp8kl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1a0a"]
+texture = ExtResource("2_188s6")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="Resource" id="Resource_upd7e"]
+script = ExtResource("5_sp8kl")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
+
+[sub_resource type="Resource" id="Resource_cxk5j"]
+script = ExtResource("5_sp8kl")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ivq1w")
+
+[node name="ShopPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -286.0
+offset_top = -121.0
+offset_right = 285.0
+offset_bottom = 139.0
+theme = ExtResource("1_xo2df")
+theme_override_styles/panel = SubResource("StyleBoxTexture_j1a0a")
+
+[node name="Scroll" type="ScrollContainer" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 561.0
+offset_bottom = 250.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+script = ExtResource("4_7dkkt")
+wheel_scroll_damper = SubResource("Resource_upd7e")
+dragging_scroll_damper = SubResource("Resource_cxk5j")
+allow_vertical_scroll = false
+
+[node name="Container" type="GridContainer" parent="ShopPanel/Scroll"]
+clip_contents = true
+layout_mode = 2
+columns = 6
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = 156.0
+offset_right = 60.5
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_xo2df")
+text = "Close"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("3_d2m20")]
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

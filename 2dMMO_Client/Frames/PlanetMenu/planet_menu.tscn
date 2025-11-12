@@ -1,0 +1,143 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsuvy06lka6hi"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_8nyxp"]
+[ext_resource type="Script" path="res://Frames/PlanetMenu/planet_menu.gd" id="1_abjti"]
+[ext_resource type="Texture2D" uid="uid://boms4jahvmb57" path="res://Assets/Gui/WorldMenu/SeparatorBar.png" id="2_hbtmx"]
+[ext_resource type="PackedScene" uid="uid://57kdei6jtv5o" path="res://Scenes/GuiScenes/Blueprints/Animation.tscn" id="4_1acfi"]
+
+[node name="PlanetMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(480, 257)
+script = ExtResource("1_abjti")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.5
+offset_top = -150.5
+offset_right = 303.5
+offset_bottom = 150.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8nyxp")
+
+[node name="Visuals" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 34.5
+offset_top = 54.5
+offset_right = 165.5
+offset_bottom = 74.5
+theme = ExtResource("1_8nyxp")
+text = "Visuals"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SeparatorBar" type="Sprite2D" parent="Panel/Visuals"]
+position = Vector2(65.5, 23.5)
+scale = Vector2(0.507812, 1)
+texture = ExtResource("2_hbtmx")
+
+[node name="VisualOptions" type="VBoxContainer" parent="Panel/Visuals"]
+layout_mode = 0
+offset_left = -0.5
+offset_top = 35.0
+offset_right = 130.5
+offset_bottom = 167.0
+
+[node name="Overworld" type="CheckBox" parent="Panel/Visuals/VisualOptions"]
+layout_mode = 2
+text = "Overworld"
+
+[node name="Space" type="CheckBox" parent="Panel/Visuals/VisualOptions"]
+layout_mode = 2
+text = "Space"
+
+[node name="WinterWonderLand" type="CheckBox" parent="Panel/Visuals/VisualOptions"]
+layout_mode = 2
+text = "Winter Wonderland"
+
+[node name="ArcticPlains" type="CheckBox" parent="Panel/Visuals/VisualOptions"]
+layout_mode = 2
+text = "Arctic Plains"
+
+[node name="Desert" type="CheckBox" parent="Panel/Visuals/VisualOptions"]
+layout_mode = 2
+text = "Desert"
+
+[node name="Movement" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 205.5
+offset_top = 54.5
+offset_right = 336.5
+offset_bottom = 74.5
+theme = ExtResource("1_8nyxp")
+text = "Movement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SeparatorBar" type="Sprite2D" parent="Panel/Movement"]
+position = Vector2(65.5, 23.5)
+scale = Vector2(0.507812, 1)
+texture = ExtResource("2_hbtmx")
+
+[node name="MovementOptions" type="VBoxContainer" parent="Panel/Movement"]
+layout_mode = 0
+offset_left = -0.5
+offset_top = 35.0
+offset_right = 130.5
+offset_bottom = 167.0
+
+[node name="LowGravity" type="CheckBox" parent="Panel/Movement/MovementOptions"]
+layout_mode = 2
+text = "Low Gravity"
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = 113.0
+offset_right = 59.5
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8nyxp")
+text = "Close"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("4_1acfi")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -108.0
+offset_top = 51.0
+offset_right = 108.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme = ExtResource("1_8nyxp")
+theme_override_font_sizes/font_size = 60
+text = "Planet Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Visuals/VisualOptions/Overworld" to="." method="_on_overworld_pressed"]
+[connection signal="pressed" from="Panel/Visuals/VisualOptions/Space" to="." method="_on_space_pressed"]
+[connection signal="pressed" from="Panel/Visuals/VisualOptions/WinterWonderLand" to="." method="_on_winter_wonder_land_pressed"]
+[connection signal="pressed" from="Panel/Visuals/VisualOptions/ArcticPlains" to="." method="_on_arctic_plains_pressed"]
+[connection signal="pressed" from="Panel/Visuals/VisualOptions/Desert" to="." method="_on_desert_pressed"]
+[connection signal="pressed" from="Panel/Movement/MovementOptions/LowGravity" to="." method="_on_low_gravity_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

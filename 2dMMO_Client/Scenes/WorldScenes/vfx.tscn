@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdcog6ffd6udl"]
+
+[ext_resource type="Script" path="res://Scenes/WorldScenes/vfx.gd" id="1_s3tbr"]
+
+[node name="VFX" type="Sprite2D"]
+script = ExtResource("1_s3tbr")

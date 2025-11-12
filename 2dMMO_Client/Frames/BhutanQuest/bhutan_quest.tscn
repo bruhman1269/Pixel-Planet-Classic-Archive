@@ -1,0 +1,210 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwh4kwun0vcbj"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_vjjau"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="2_0iyg2"]
+[ext_resource type="Script" path="res://Frames/BhutanQuest/bhutan_quest.gd" id="2_56pfv"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="4_xhvvp"]
+[ext_resource type="Texture2D" uid="uid://dykfdey0ld7oy" path="res://Assets/Gui/tabmiddlepart.png" id="5_8rpne"]
+[ext_resource type="Texture2D" uid="uid://ojpplb1e4g1" path="res://Assets/Gui/Shop_Panel.png" id="6_wyqdl"]
+[ext_resource type="Shader" path="res://Shaders/highlight.gdshader" id="7_5q52t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mkme"]
+bg_color = Color(0.113725, 0.113725, 0.121569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c8q0"]
+bg_color = Color(0, 0.925577, 0.202576, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_joxrq"]
+texture = ExtResource("6_wyqdl")
+texture_margin_left = 10.0
+texture_margin_top = 21.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdnni"]
+texture = ExtResource("5_8rpne")
+texture_margin_top = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 4, 18)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phdl4"]
+shader = ExtResource("7_5q52t")
+shader_parameter/size_effect = 3.0
+shader_parameter/speed = 0.15
+shader_parameter/highlight_strength = 0.35
+shader_parameter/color_mode_toggle = false
+shader_parameter/is_horizontal = false
+
+[node name="Bhutan Quest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(480, 270)
+theme = ExtResource("1_vjjau")
+script = ExtResource("2_56pfv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -54.0
+offset_right = 246.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Collect" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = -39.0
+offset_right = 241.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+disabled = true
+text = "Collect"
+
+[node name="Close" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.0
+offset_top = -39.0
+offset_right = -130.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "I'll be back!"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -94.0
+offset_right = 89.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset = Vector2(55.625, 10)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = -2
+text = "THE Bhutan Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(281, 160)
+scale = Vector2(4, 4)
+texture = ExtResource("2_0iyg2")
+flip_h = true
+hframes = 32
+vframes = 11
+frame = 194
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("4_xhvvp")]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 287.0
+offset_right = 640.0
+offset_bottom = 299.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7mkme")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3c8q0")
+value = 50.11
+show_percentage = false
+
+[node name="Objective" type="Label" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 262.0
+offset_right = 640.0
+offset_bottom = 282.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = -2
+text = "0/100 Blocks Placed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finished" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 238.0
+offset_top = 237.0
+offset_right = 716.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = -2
+text = "You did it! The quest is complete, and now there’s a calm where it once was. Rest and be patient, friend. New adventures will find you soon, and I’ll be here, cheering you on."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CurrentStep" type="Label" parent="."]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 217.0
+offset_right = 467.0
+offset_bottom = 237.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.541176)
+text = "Current Step: 1/2"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 304.0
+offset_right = 644.0
+offset_bottom = 324.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = -2
+text = "Place 100 Blocks."
+horizontal_alignment = 1
+
+[node name="Reward" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 730.0
+offset_top = 216.0
+offset_right = 794.0
+offset_bottom = 280.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_joxrq")
+
+[node name="Panel2" type="Panel" parent="Reward"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 21.0
+offset_bottom = 54.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sdnni")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Reward"]
+material = SubResource("ShaderMaterial_phdl4")
+position = Vector2(32, 33.9998)
+texture = ExtResource("2_0iyg2")
+flip_h = true
+hframes = 32
+vframes = 11
+frame = 191
+
+[connection signal="pressed" from="Panel/Collect" to="." method="_on_collect_pressed"]
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]

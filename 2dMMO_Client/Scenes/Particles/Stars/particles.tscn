@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7tr4uqi53m6d"]
+
+[ext_resource type="Texture2D" uid="uid://cruqjapladkqx" path="res://Assets/Sprites/VFX/star.png" id="1_mc6fp"]
+
+[sub_resource type="Curve" id="Curve_57xbt"]
+min_value = 0.01
+_data = [Vector2(0, 0.01), 0.0, 0.0, 0, 0, Vector2(1, 0.298), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8io5y"]
+curve = SubResource("Curve_57xbt")
+
+[sub_resource type="Curve" id="Curve_tt4tv"]
+_data = [Vector2(0, 0.0090909), 0.0, 0.0, 0, 0, Vector2(0.271084, 1), 0.0, 0.0, 0, 0, Vector2(0.674699, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.281818), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_kunca"]
+curve = SubResource("Curve_tt4tv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xm3ta"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 200.0
+direction = Vector3(1, 1, 0)
+spread = 179.52
+flatness = 0.44
+initial_velocity_min = 0.3
+initial_velocity_max = 0.6
+angular_velocity_min = 1.0
+angular_velocity_max = 10.0
+orbit_velocity_min = 0.01
+orbit_velocity_max = 0.01
+orbit_velocity_curve = SubResource("CurveTexture_8io5y")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_kunca")
+
+[sub_resource type="Curve" id="Curve_1vccp"]
+min_value = 0.01
+_data = [Vector2(0, 0.136), 0.0, 0.0, 0, 0, Vector2(1, 0.28), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_qu1ve"]
+curve = SubResource("Curve_1vccp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_man7b"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 200.0
+direction = Vector3(1, 1, 0)
+spread = 179.52
+flatness = 0.44
+initial_velocity_min = 0.1
+initial_velocity_max = 0.2
+angular_velocity_min = 1.0
+angular_velocity_max = 10.0
+orbit_velocity_min = 0.01
+orbit_velocity_max = 0.01
+orbit_velocity_curve = SubResource("CurveTexture_qu1ve")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_kunca")
+color = Color(0, 0.784314, 1, 0.27451)
+
+[node name="Particles" type="Node"]
+
+[node name="WhiteStars" type="GPUParticles2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(463, 268)
+scale = Vector2(5.11629, 2.64)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_xm3ta")
+texture = ExtResource("1_mc6fp")
+lifetime = 11.44
+speed_scale = 0.44
+randomness = 0.44
+fixed_fps = 0
+
+[node name="BlueStars" type="GPUParticles2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(463, 268)
+scale = Vector2(5.11629, 2.64)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_man7b")
+texture = ExtResource("1_mc6fp")
+lifetime = 11.44
+speed_scale = 0.44
+randomness = 0.44
+fixed_fps = 0

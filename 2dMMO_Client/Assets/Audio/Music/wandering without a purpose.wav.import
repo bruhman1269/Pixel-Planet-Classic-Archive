@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fn1c1ficmuei"
+path="res://.godot/imported/wandering without a purpose.wav-e36d6971d16eebf22ca9298516bf1a10.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/wandering without a purpose.wav"
+dest_files=["res://.godot/imported/wandering without a purpose.wav-e36d6971d16eebf22ca9298516bf1a10.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

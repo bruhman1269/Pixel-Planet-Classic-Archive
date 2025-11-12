@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="pixel_planet_server"
+run/main_scene="res://server.tscn"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://server_icon.png"
+
+[autoload]
+
+Database="*res://Database/Database.gd"
+Global="*res://Global.gd"
+AntiCheat="*res://Singletons/AntiCheat.gd"
+Worlds="*res://DataHolders/Worlds.gd"
+Peers="*res://DataHolders/Peers.gd"
+Data="*res://Singletons/Data.gd"
+Folders="*res://Singletons/Folders.gd"
+Random="*res://Singletons/Random.gd"
+Date="*res://Singletons/Date.gd"
+Commands="*res://Singletons/Commands.gd"
+
+[display]
+
+window/size/viewport_width=100
+window/size/viewport_height=100
+
+[dotnet]
+
+project/assembly_name="2d Mmo Server"

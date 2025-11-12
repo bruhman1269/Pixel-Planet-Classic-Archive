@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvfgyt81l7a76"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_jnnsd"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="2_8m1hy"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/ItemAdder/ItemAdder.gd" id="2_das0j"]
+
+[node name="ItemAdder" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 41.0
+offset_top = 14.0
+offset_right = 41.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jnnsd")
+script = ExtResource("2_das0j")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -217.0
+offset_top = -114.0
+offset_right = 136.0
+offset_bottom = 66.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 25.0
+offset_right = 296.0
+offset_bottom = 71.0
+text = "How many items would you like to add?
+You have ITEM_COUNT"
+horizontal_alignment = 1
+
+[node name="Amount" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 88.0
+offset_right = 306.0
+offset_bottom = 112.0
+placeholder_text = "0"
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 142.0
+offset_right = 124.0
+offset_bottom = 170.0
+focus_mode = 0
+text = "Cancel"
+
+[node name="NextButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 142.0
+offset_right = 345.0
+offset_bottom = 170.0
+focus_mode = 0
+text = "Next"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("2_8m1hy")]
+
+[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/NextButton" to="." method="_on_next_button_pressed"]

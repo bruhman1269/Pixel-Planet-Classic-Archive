@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnqbxd30fkha2"]
+
+[ext_resource type="Script" path="res://Scenes/WorldScenes/PlatformArea.gd" id="1_ghlj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3prfs"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmu4y"]
+size = Vector2(32, 9)
+
+[node name="PlatformArea" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource("1_ghlj1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_3prfs")
+one_way_collision = true
+debug_color = Color(0.713726, 0.258824, 1, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 0.5)
+shape = SubResource("RectangleShape2D_kmu4y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjcb8j8wtngjw"]
+
+[ext_resource type="AudioStream" uid="uid://cckgaxsk705f1" path="res://Assets/Audio/Tile_Update.ogg" id="1_3l47b"]
+[ext_resource type="Script" path="res://Scenes/WorldScenes/tile_update_sound.gd" id="2_2rnvx"]
+
+[node name="TileUpdateSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_3l47b")
+volume_db = -10.0
+bus = &"Game"
+script = ExtResource("2_2rnvx")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

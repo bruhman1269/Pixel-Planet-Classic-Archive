@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5n35jpbeofeg"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_ex5po"]
+[ext_resource type="Script" path="res://Frames/ItemFrame/item_frame.gd" id="1_ydbp1"]
+[ext_resource type="Texture2D" uid="uid://dkilewxne7u4q" path="res://Assets/Gui/shop/reward-slot.png" id="2_od7c2"]
+[ext_resource type="Texture2D" uid="uid://blrb1acb2ie5g" path="res://Assets/Gui/crafting/add_item_normal.png" id="3_k6160"]
+[ext_resource type="Texture2D" uid="uid://cuy44vuvuol3s" path="res://Assets/Gui/crafting/add_item_hover.png" id="4_i15e4"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="6_4eay7"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="6_31ww8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05c7x"]
+texture = ExtResource("2_od7c2")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 8.0
+texture_margin_bottom = 10.0
+
+[node name="ItemFrame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(480, 270)
+script = ExtResource("1_ydbp1")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.5
+offset_top = -80.5
+offset_right = 131.5
+offset_bottom = 80.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131.5, 80.5)
+theme = ExtResource("1_ex5po")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -51.5
+offset_right = 29.5
+offset_bottom = 5.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+theme_override_styles/panel = SubResource("StyleBoxTexture_05c7x")
+
+[node name="ItemButton" type="TextureButton" parent="Panel/Panel"]
+modulate = Color(1, 1, 1, 0.188235)
+offset_left = 13.5
+offset_top = 13.0
+offset_right = 45.5
+offset_bottom = 45.0
+texture_normal = ExtResource("3_k6160")
+texture_hover = ExtResource("4_i15e4")
+
+[node name="ItemSprite" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(30.5, 29.5)
+texture = ExtResource("6_31ww8")
+hframes = 32
+vframes = 11
+
+[node name="Remove" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 7.5
+offset_top = 122.5
+offset_right = 81.5
+offset_bottom = 150.5
+disabled = true
+text = "Remove"
+
+[node name="Confirm" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 181.5
+offset_top = 122.5
+offset_right = 255.5
+offset_bottom = 150.5
+text = "Confirm"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("6_4eay7")]
+
+[connection signal="pressed" from="Panel/Panel/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="Panel/Remove" to="." method="_on_remove_pressed"]
+[connection signal="pressed" from="Panel/Confirm" to="." method="_on_confirm_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx12cno8faooi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5psw2"]
+size = Vector2(32, 32)
+
+[node name="HurtArea" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_5psw2")
+debug_color = Color(0.945098, 0, 0.6, 0.419608)

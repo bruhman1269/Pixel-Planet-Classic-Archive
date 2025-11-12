@@ -1,0 +1,248 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3cirq4j2kbq7"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_vefy2"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Chatting/chat.gd" id="2_5ygdy"]
+[ext_resource type="Texture2D" uid="uid://b44rchsgwtwsi" path="res://Assets/Gui/ChatTab.png" id="2_32r5m"]
+[ext_resource type="Shader" path="res://Frames/World/Blur.gdshader" id="4_67g5y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c537g"]
+shader = ExtResource("4_67g5y")
+shader_parameter/blur_type = 0
+shader_parameter/blur_amount = 12
+shader_parameter/blur_radius = 1.0
+shader_parameter/blur_direction = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dul1"]
+bg_color = Color(0, 0, 0, 0.294118)
+
+[sub_resource type="Animation" id="Animation_sfpnw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_tguwq"]
+resource_name = "close"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.075, 0, 0.075, 0, 1e-05, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0, 0.133333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.075, 0, 0.075, 0, 1e-05, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0, 0.133333)
+}
+
+[sub_resource type="Animation" id="Animation_f0h2i"]
+resource_name = "open"
+length = 0.15
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.075, 0, 0.075, 0, 1, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0, 0.15)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.075, 0, 0.075, 0, 1, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0, 0.15)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v6vip"]
+_data = {
+"RESET": SubResource("Animation_sfpnw"),
+"close": SubResource("Animation_tguwq"),
+"open": SubResource("Animation_f0h2i")
+}
+
+[node name="Chat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(29, 514)
+theme = ExtResource("1_vefy2")
+script = ExtResource("2_5ygdy")
+
+[node name="ChatLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 467.0
+offset_right = 960.0
+offset_bottom = 497.0
+theme_override_colors/font_color = Color(0.768627, 0.768627, 0.768627, 1)
+text = "Send a chat message"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputBackBlur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c537g")
+layout_mode = 0
+offset_left = 12.0
+offset_top = 497.0
+offset_right = 939.0
+offset_bottom = 529.0
+
+[node name="ChatInput" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -454.0
+offset_top = 227.0
+offset_right = 459.0
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_5dul1")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_5dul1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dul1")
+placeholder_text = "Send a chat message"
+context_menu_enabled = false
+
+[node name="ColorRect" type="ColorRect" parent="ChatInput"]
+layout_mode = 0
+offset_left = -14.0
+offset_bottom = 32.0
+color = Color(0, 0, 0, 0.294118)
+
+[node name="Divider" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 463.0
+offset_right = 960.0
+offset_bottom = 467.0
+
+[node name="ChatTab" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_32r5m")
+
+[node name="Label" type="Label" parent="ChatTab"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.768627, 0.768627, 0.768627, 1)
+text = "Chat and Commands"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChatBG" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c537g")
+layout_mode = 0
+offset_left = 12.0
+offset_top = 219.0
+offset_right = 402.0
+offset_bottom = 493.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="ColorRect" type="ColorRect" parent="ChatBG"]
+layout_mode = 0
+offset_right = 390.0
+offset_bottom = 274.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.294118)
+
+[node name="Messages" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 234.0
+offset_right = 402.0
+offset_bottom = 493.0
+theme_override_constants/line_separation = 1
+scroll_following = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v6vip")
+}

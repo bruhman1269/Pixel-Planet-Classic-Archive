@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfip27f35ksk5"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_4byqd"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Marketplace/ItemFilters.gd" id="2_ma3fr"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="3_0ex1l"]
+
+[node name="ItemFilters" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4byqd")
+script = ExtResource("2_ma3fr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -159.0
+offset_top = -114.0
+offset_right = 160.0
+offset_bottom = 129.0
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 68.0
+offset_right = 256.0
+offset_bottom = 91.0
+text = "Min. Price"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 20.0
+offset_right = 256.0
+offset_bottom = 43.0
+text = "Item Name"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 116.0
+offset_right = 256.0
+offset_bottom = 139.0
+text = "Max. Price"
+horizontal_alignment = 1
+
+[node name="ItemNameEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 39.0
+offset_right = 299.0
+offset_bottom = 64.0
+placeholder_text = "Name"
+alignment = 1
+context_menu_enabled = false
+
+[node name="MinPriceEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 87.0
+offset_right = 299.0
+offset_bottom = 112.0
+placeholder_text = "0"
+alignment = 1
+context_menu_enabled = false
+
+[node name="MaxPriceEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 134.0
+offset_right = 299.0
+offset_bottom = 159.0
+placeholder_text = "0"
+alignment = 1
+context_menu_enabled = false
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 203.0
+offset_right = 124.0
+offset_bottom = 231.0
+text = "Cancel"
+
+[node name="ResetFiltersButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 163.0
+offset_right = 231.0
+offset_bottom = 191.0
+text = "Reset All Filters"
+
+[node name="ApplyFiltersButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 203.0
+offset_right = 311.0
+offset_bottom = 231.0
+text = "Apply Filters"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("3_0ex1l")]
+
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/ResetFiltersButton" to="." method="_on_reset_filters_button_pressed"]
+[connection signal="pressed" from="Panel/ApplyFiltersButton" to="." method="_on_apply_filters_button_pressed"]

@@ -1,0 +1,139 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8x7r5dn3cxw8"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_4i57o"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Dropping/Dropping.gd" id="1_xolkp"]
+[ext_resource type="Texture2D" uid="uid://dkilewxne7u4q" path="res://Assets/Gui/shop/reward-slot.png" id="3_tj4v0"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="4_o33d7"]
+[ext_resource type="FontFile" uid="uid://daaceucur7wcw" path="res://Assets/Fonts/Pixeled.ttf" id="5_f7kww"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="5_q3u5s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x8322"]
+font_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Dropping" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(479, 256)
+script = ExtResource("1_xolkp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.5
+offset_top = -83.5
+offset_right = 158.5
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4i57o")
+
+[node name="Amount" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -19.5
+offset_right = 75.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "amount"
+alignment = 1
+context_menu_enabled = false
+
+[node name="AmountLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 44.0
+offset_right = 234.0
+offset_bottom = 64.0
+text = "How much do you want to drop?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Drop" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 55.0
+offset_top = 43.0
+offset_right = 152.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4i57o")
+disabled = true
+text = "Drop"
+
+[node name="Cancel" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 43.0
+offset_right = -53.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4i57o")
+text = "Cancel"
+
+[node name="ItemFrame" type="Sprite2D" parent="."]
+position = Vector2(292, 215.51)
+texture = ExtResource("3_tj4v0")
+
+[node name="ItemSprite" type="Sprite2D" parent="ItemFrame"]
+position = Vector2(1, 0.494995)
+texture = ExtResource("4_o33d7")
+hframes = 32
+vframes = 11
+
+[node name="ItemAmount" type="Label" parent="ItemFrame"]
+offset_left = -38.0
+offset_top = -22.505
+offset_right = 19.0
+offset_bottom = -5.505
+theme_override_fonts/font = ExtResource("5_f7kww")
+label_settings = SubResource("LabelSettings_x8322")
+horizontal_alignment = 2
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("5_q3u5s")]
+
+[node name="ALL" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 84.0
+offset_top = -19.0
+offset_right = 146.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4i57o")
+text = "ALL"
+
+[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
+[connection signal="pressed" from="Drop" to="." method="_on_drop_pressed"]
+[connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="ALL" to="." method="_on_all_pressed"]

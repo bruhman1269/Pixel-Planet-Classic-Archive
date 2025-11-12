@@ -1,0 +1,120 @@
+[gd_scene load_steps=11 format=3 uid="uid://cra026uic2dm3"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_tw2nv"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Grinding/Grinding.gd" id="2_d628t"]
+[ext_resource type="Texture2D" uid="uid://dkilewxne7u4q" path="res://Assets/Gui/shop/reward-slot.png" id="3_pfskg"]
+[ext_resource type="Texture2D" uid="uid://blrb1acb2ie5g" path="res://Assets/Gui/crafting/add_item_normal.png" id="4_kk1hy"]
+[ext_resource type="Texture2D" uid="uid://cuy44vuvuol3s" path="res://Assets/Gui/crafting/add_item_hover.png" id="5_aw7wq"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="6_n02mn"]
+[ext_resource type="Texture2D" uid="uid://b3ha8oeubskwy" path="res://Assets/Gui/crafting/equals_deco.png" id="8_l1wlt"]
+[ext_resource type="FontFile" uid="uid://daaceucur7wcw" path="res://Assets/Fonts/Pixeled.ttf" id="9_pfs7v"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="10_pu3i2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_clupy"]
+font_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Grinding" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tw2nv")
+script = ExtResource("2_d628t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -137.0
+offset_top = -85.0
+offset_right = 134.0
+offset_bottom = 88.0
+
+[node name="ItemFrame" type="Sprite2D" parent="Panel"]
+position = Vector2(85, 72)
+texture = ExtResource("3_pfskg")
+
+[node name="ResultFrame" type="Sprite2D" parent="Panel"]
+position = Vector2(188, 72)
+texture = ExtResource("3_pfskg")
+
+[node name="ItemButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 56.0
+offset_right = 102.0
+offset_bottom = 88.0
+focus_mode = 0
+texture_normal = ExtResource("4_kk1hy")
+texture_hover = ExtResource("5_aw7wq")
+
+[node name="ItemSprite" type="Sprite2D" parent="Panel"]
+position = Vector2(86, 72)
+texture = ExtResource("6_n02mn")
+hframes = 32
+vframes = 11
+
+[node name="ResultItemSprite" type="Sprite2D" parent="Panel"]
+position = Vector2(189, 72)
+texture = ExtResource("6_n02mn")
+hframes = 32
+vframes = 11
+
+[node name="EqualsDeco" type="Sprite2D" parent="Panel"]
+position = Vector2(136, 72)
+texture = ExtResource("8_l1wlt")
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 134.0
+offset_right = 124.0
+offset_bottom = 162.0
+focus_mode = 0
+text = "Cancel"
+
+[node name="GrindButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 134.0
+offset_right = 263.0
+offset_bottom = 162.0
+focus_mode = 0
+text = "Grind"
+
+[node name="ItemAmount" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 49.0
+offset_right = 103.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("9_pfs7v")
+label_settings = SubResource("LabelSettings_clupy")
+horizontal_alignment = 2
+
+[node name="ResultAmount" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 49.0
+offset_right = 206.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("9_pfs7v")
+label_settings = SubResource("LabelSettings_clupy")
+horizontal_alignment = 2
+
+[node name="NotEnoughLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 23.0
+offset_right = 256.0
+offset_bottom = 46.0
+text = "You don't have enough items to grind."
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("10_pu3i2")]
+
+[connection signal="pressed" from="Panel/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/GrindButton" to="." method="_on_craft_button_pressed"]

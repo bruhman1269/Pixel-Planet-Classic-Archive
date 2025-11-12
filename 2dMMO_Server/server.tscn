@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw3q32yhlqboi"]
+
+[ext_resource type="Script" uid="uid://ctdj7c1g4qolv" path="res://Server.gd" id="1_hmouy"]
+[ext_resource type="Script" uid="uid://dgeabtrp3ushk" path="res://Server/Events/events.gd" id="2_k58s7"]
+
+[node name="Server" type="Node"]
+script = ExtResource("1_hmouy")
+
+[node name="Events" type="Node" parent="."]
+script = ExtResource("2_k58s7")
+
+[node name="SaveTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="SaveTimer" to="." method="_on_save_timer_timeout"]

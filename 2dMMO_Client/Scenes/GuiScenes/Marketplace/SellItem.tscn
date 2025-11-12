@@ -1,0 +1,190 @@
+[gd_scene load_steps=13 format=3 uid="uid://bjcqkowy1l02g"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_0bj6a"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Marketplace/SellItem.gd" id="2_kffom"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="3_oaigu"]
+[ext_resource type="FontFile" uid="uid://daaceucur7wcw" path="res://Assets/Fonts/Pixeled.ttf" id="4_k60xl"]
+[ext_resource type="Texture2D" uid="uid://dkilewxne7u4q" path="res://Assets/Gui/shop/reward-slot.png" id="5_y4awb"]
+[ext_resource type="Texture2D" uid="uid://blrb1acb2ie5g" path="res://Assets/Gui/crafting/add_item_normal.png" id="6_dc4f4"]
+[ext_resource type="Texture2D" uid="uid://cuy44vuvuol3s" path="res://Assets/Gui/crafting/add_item_hover.png" id="7_xpnvx"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="8_11223"]
+[ext_resource type="Texture2D" uid="uid://xlifqtunvoyr" path="res://Assets/Gui/filler_panel.png" id="9_n53vn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rx5ff"]
+line_spacing = -4.0
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_icvtp"]
+font_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btfsd"]
+texture = ExtResource("9_n53vn")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+
+[node name="SellItem" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_right = -238.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0bj6a")
+script = ExtResource("2_kffom")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -158.0
+offset_top = -134.0
+offset_right = 161.0
+offset_bottom = 162.0
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 27.0
+offset_right = 282.0
+offset_bottom = 50.0
+text = "Total Price (max 999,999,999)"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 76.0
+offset_right = 282.0
+offset_bottom = 99.0
+text = "Unit Price"
+horizontal_alignment = 1
+
+[node name="ResultLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 183.0
+offset_right = 309.0
+offset_bottom = 254.0
+text = "You are selling (item_amount) items for (unit_price) bits each, with a total price of (total_price) bits."
+label_settings = SubResource("LabelSettings_rx5ff")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 125.0
+offset_right = 282.0
+offset_bottom = 148.0
+text = "Hours active (max 96):"
+horizontal_alignment = 1
+
+[node name="TotalPriceEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 46.0
+offset_right = 282.0
+offset_bottom = 71.0
+placeholder_text = "0"
+alignment = 1
+editable = false
+
+[node name="UnitPriceEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 95.0
+offset_right = 282.0
+offset_bottom = 120.0
+placeholder_text = "0"
+alignment = 1
+editable = false
+
+[node name="HoursActiveEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 144.0
+offset_right = 282.0
+offset_bottom = 169.0
+placeholder_text = "0"
+alignment = 1
+editable = false
+
+[node name="ItemFrame" type="Sprite2D" parent="Panel"]
+position = Vector2(48, 107.5)
+texture = ExtResource("5_y4awb")
+
+[node name="ItemButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 91.5
+offset_right = 65.0
+offset_bottom = 123.5
+texture_normal = ExtResource("6_dc4f4")
+texture_hover = ExtResource("7_xpnvx")
+
+[node name="ItemSprite" type="Sprite2D" parent="Panel"]
+position = Vector2(49, 107.5)
+texture = ExtResource("3_oaigu")
+hframes = 32
+vframes = 11
+
+[node name="ItemAmount" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 84.5
+offset_right = 66.0
+offset_bottom = 101.5
+theme_override_fonts/font = ExtResource("4_k60xl")
+label_settings = SubResource("LabelSettings_icvtp")
+horizontal_alignment = 2
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 257.0
+offset_right = 124.0
+offset_bottom = 285.0
+text = "Cancel"
+
+[node name="CreateListingButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 257.0
+offset_right = 311.0
+offset_bottom = 285.0
+text = "Create Listing"
+
+[node name="Listings" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 166.0
+offset_top = -152.0
+offset_right = 631.0
+offset_bottom = 181.0
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = -126.0
+offset_right = 166.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_btfsd")
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("8_11223")]
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = -151.0
+offset_right = 444.0
+offset_bottom = -128.0
+text = "Your listings"
+
+[connection signal="text_changed" from="Panel/TotalPriceEdit" to="." method="_on_total_price_edit_text_changed"]
+[connection signal="text_changed" from="Panel/UnitPriceEdit" to="." method="_on_unit_price_edit_text_changed"]
+[connection signal="text_changed" from="Panel/HoursActiveEdit" to="." method="_on_hours_active_edit_text_changed"]
+[connection signal="pressed" from="Panel/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/CreateListingButton" to="." method="_on_create_listing_button_pressed"]

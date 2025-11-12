@@ -1,0 +1,24 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://bbseapoohk67u"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_elfm3"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_1iuax"]
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mul;
+
+
+
+"
+graph_offset = Vector2(55.9016, -31.1255)
+mode = 1
+modes/blend = 3
+flags/light_only = false
+nodes/vertex/0/position = Vector2(1200, 140)
+nodes/fragment/0/position = Vector2(1260, 140)
+nodes/fragment/2/node = SubResource("VisualShaderNodeInput_elfm3")
+nodes/fragment/2/position = Vector2(160, 240)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_1iuax")
+nodes/fragment/3/position = Vector2(680, 140)

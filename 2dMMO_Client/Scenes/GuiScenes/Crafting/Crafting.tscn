@@ -1,0 +1,156 @@
+[gd_scene load_steps=12 format=3 uid="uid://6vl3akowcree"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_605u8"]
+[ext_resource type="Texture2D" uid="uid://dkilewxne7u4q" path="res://Assets/Gui/shop/reward-slot.png" id="2_2mu58"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Crafting/Crafting.gd" id="2_jqidk"]
+[ext_resource type="Texture2D" uid="uid://blrb1acb2ie5g" path="res://Assets/Gui/crafting/add_item_normal.png" id="3_j3sme"]
+[ext_resource type="Texture2D" uid="uid://cuy44vuvuol3s" path="res://Assets/Gui/crafting/add_item_hover.png" id="4_tt5av"]
+[ext_resource type="Texture2D" uid="uid://dbgu5sv80qeqb" path="res://Assets/Gui/crafting/add_deco.png" id="5_b1a6s"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="5_y34v2"]
+[ext_resource type="Texture2D" uid="uid://b3ha8oeubskwy" path="res://Assets/Gui/crafting/equals_deco.png" id="6_04ia5"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="7_u6vg7"]
+[ext_resource type="FontFile" uid="uid://daaceucur7wcw" path="res://Assets/Fonts/Pixeled.ttf" id="9_vbi6l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_clupy"]
+font_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Crafting" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_605u8")
+script = ExtResource("2_jqidk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -165.0
+offset_top = -86.0
+offset_right = 165.0
+offset_bottom = 87.0
+
+[node name="Item1Frame" type="Sprite2D" parent="Panel"]
+position = Vector2(60, 77)
+texture = ExtResource("2_2mu58")
+
+[node name="Item2Frame" type="Sprite2D" parent="Panel"]
+position = Vector2(164, 77)
+texture = ExtResource("2_2mu58")
+
+[node name="ResultFrame" type="Sprite2D" parent="Panel"]
+position = Vector2(267, 77)
+texture = ExtResource("2_2mu58")
+
+[node name="Item1Button" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 61.0
+offset_right = 77.0
+offset_bottom = 93.0
+focus_mode = 0
+texture_normal = ExtResource("3_j3sme")
+texture_hover = ExtResource("4_tt5av")
+
+[node name="Item2Button" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 61.0
+offset_right = 181.0
+offset_bottom = 93.0
+focus_mode = 0
+texture_normal = ExtResource("3_j3sme")
+texture_hover = ExtResource("4_tt5av")
+
+[node name="Item1Sprite" type="Sprite2D" parent="Panel"]
+position = Vector2(61, 77)
+texture = ExtResource("5_y34v2")
+hframes = 32
+vframes = 11
+
+[node name="Item2Sprite" type="Sprite2D" parent="Panel"]
+position = Vector2(165, 77)
+texture = ExtResource("5_y34v2")
+hframes = 32
+vframes = 11
+
+[node name="ResultItemSprite" type="Sprite2D" parent="Panel"]
+position = Vector2(268, 77)
+texture = ExtResource("5_y34v2")
+hframes = 32
+vframes = 11
+
+[node name="PlusDeco" type="Sprite2D" parent="Panel"]
+position = Vector2(112, 77)
+texture = ExtResource("5_b1a6s")
+
+[node name="EqualsDeco" type="Sprite2D" parent="Panel"]
+position = Vector2(215, 77)
+texture = ExtResource("6_04ia5")
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 134.0
+offset_right = 124.0
+offset_bottom = 162.0
+focus_mode = 0
+text = "Cancel"
+
+[node name="CraftButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 134.0
+offset_right = 322.0
+offset_bottom = 162.0
+focus_mode = 0
+text = "Craft"
+
+[node name="Item1Amount" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 54.0
+offset_right = 78.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("9_vbi6l")
+label_settings = SubResource("LabelSettings_clupy")
+horizontal_alignment = 2
+
+[node name="Item2Amount" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 54.0
+offset_right = 182.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("9_vbi6l")
+label_settings = SubResource("LabelSettings_clupy")
+horizontal_alignment = 2
+
+[node name="ResultAmount" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 54.0
+offset_right = 285.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("9_vbi6l")
+label_settings = SubResource("LabelSettings_clupy")
+horizontal_alignment = 2
+
+[node name="NotEnoughLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 23.0
+offset_right = 282.0
+offset_bottom = 46.0
+text = "You don't have enough items to craft."
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("7_u6vg7")]
+
+[connection signal="pressed" from="Panel/Item1Button" to="." method="_on_item_1_button_pressed"]
+[connection signal="pressed" from="Panel/Item2Button" to="." method="_on_item_2_button_pressed"]
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/CraftButton" to="." method="_on_craft_button_pressed"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq4ccwyf33cc8"]
+
+[ext_resource type="Texture2D" uid="uid://cjg5282c8i4b6" path="res://Assets/Sprites/VFX/full_block_smoke.png" id="1_25j38"]
+[ext_resource type="Script" path="res://Scenes/WorldScenes/Effects/Smoke.gd" id="2_wcoeu"]
+[ext_resource type="AudioStream" uid="uid://cbwven31m171x" path="res://Assets/Audio/block_destroy_filtered.wav" id="3_sg7g1"]
+[ext_resource type="AudioStream" uid="uid://c0dhlxgcbxeaj" path="res://Assets/Audio/placeblock.ogg" id="4_6tty7"]
+
+[sub_resource type="Animation" id="Animation_g7sav"]
+resource_name = "smoke"
+length = 0.417
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.052, 0.104, 0.156, 0.208, 0.26, 0.312, 0.364),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8fdup"]
+_data = {
+"smoke": SubResource("Animation_g7sav")
+}
+
+[node name="Smoke" type="Sprite2D"]
+texture = ExtResource("1_25j38")
+hframes = 8
+script = ExtResource("2_wcoeu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8fdup")
+}
+speed_scale = 1.5
+
+[node name="Client" type="Node2D" parent="."]
+
+[node name="breakstream" type="AudioStreamPlayer2D" parent="Client"]
+stream = ExtResource("3_sg7g1")
+volume_db = -20.0
+max_distance = 320.0
+bus = &"Game"
+
+[node name="placestream" type="AudioStreamPlayer2D" parent="Client"]
+stream = ExtResource("4_6tty7")
+volume_db = -15.0
+max_distance = 320.0
+bus = &"Game"
+
+[node name="Peer" type="Node2D" parent="."]
+
+[node name="breakstream2" type="AudioStreamPlayer2D" parent="Peer"]
+stream = ExtResource("3_sg7g1")
+volume_db = -20.0
+max_distance = 320.0
+bus = &"Peers"
+
+[node name="placestream2" type="AudioStreamPlayer2D" parent="Peer"]
+stream = ExtResource("4_6tty7")
+volume_db = -15.0
+max_distance = 320.0
+bus = &"Peers"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

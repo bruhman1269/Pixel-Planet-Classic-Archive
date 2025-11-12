@@ -1,0 +1,256 @@
+{
+
+    "BLOCK_PACK":
+    {
+        "NAME": "Block Pack",
+        "DESCRIPTION": "This pack contains five random blocks!",
+        "PRICE": 500,
+        "ITEM_AMOUNT": 5, 
+        "FRAME": 3,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 17, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 108, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 88, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 86, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 73, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 14, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 75, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 89, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 15, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 74, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 104, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 28, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 27, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 23, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 158, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 131, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 13, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 33, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 36, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 92, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 53, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 55, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 49, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 48, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 47, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 105, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 93, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 169, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 32, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 34, "AMOUNT": 5, "CHANCE": 1}
+        ]
+
+    },
+
+    "WINTER_PACK":
+    {
+        "NAME": "Winter Pack",
+        "DESCRIPTION": "Brrrr!",
+        "PRICE": 4000,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 19,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 196, "AMOUNT": 2, "CHANCE": 10},
+            {"ITEM_ID": 197, "AMOUNT": 5, "CHANCE": 10},
+            {"ITEM_ID": 194, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 192, "AMOUNT": 30, "CHANCE": 15},
+            {"ITEM_ID": 198, "AMOUNT": 5, "CHANCE": 10},
+            {"ITEM_ID": 199, "AMOUNT": 10, "CHANCE": 10},
+            {"ITEM_ID": 200, "AMOUNT": 5, "CHANCE": 10},
+            {"ITEM_ID": 201, "AMOUNT": 10, "CHANCE": 10},
+            {"ITEM_ID": 202, "AMOUNT": 5, "CHANCE": 10},
+            {"ITEM_ID": 203, "AMOUNT": 10, "CHANCE": 10},
+            {"ITEM_ID": 204, "AMOUNT": 10, "CHANCE": 10},
+            {"ITEM_ID": 143, "AMOUNT": 1, "CHANCE": 3.5},
+            {"ITEM_ID": 205, "AMOUNT": 10, "CHANCE": 10},
+            {"ITEM_ID": 206, "AMOUNT": 1, "CHANCE": 2},
+            {"ITEM_ID": 207, "AMOUNT": 1, "CHANCE": 2}
+            
+        ]
+    },
+
+    "TEST_CLOTHES_PACK":
+    {
+        "NAME": "Clothes Pack",
+        "DESCRIPTION": "Four random clothes!",
+        "PRICE": 500,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 8,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 18, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 102, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 90, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 38, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 39, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 44, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 42, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 43, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 45, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 41, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 5, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 96, "AMOUNT": 1, "CHANCE": 3},
+            {"ITEM_ID": 7, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 9, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 6, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 107, "AMOUNT": 1, "CHANCE": 3},
+            {"ITEM_ID": 8, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 11, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 40, "AMOUNT": 1, "CHANCE": 10},
+            {"ITEM_ID": 84, "AMOUNT": 1, "CHANCE": 2},
+            {"ITEM_ID": 85, "AMOUNT": 1, "CHANCE": 2},
+            {"ITEM_ID": 68, "AMOUNT": 1, "CHANCE": 4},
+            {"ITEM_ID": 99, "AMOUNT": 1, "CHANCE": 4},
+            {"ITEM_ID": 10, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 110, "AMOUNT": 1, "CHANCE": 2}
+        ]
+
+    },
+
+    "ANGELIC_WINGS":
+    {
+        "NAME": "Angelic Wings",
+        "DESCRIPTION": "Allows flight!",
+        "PRICE": 10000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 9,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 50, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    },
+
+    "VAPORWAVE_PACK":
+    {
+        "NAME": "Vaporwave Pack",
+        "DESCRIPTION": "Get ready for the future (or past)!",
+        "PRICE": 1000,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 4,
+        "LOOT_POOL": [
+            {"ITEM_ID": 122, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 127, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 128, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 129, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 125, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 130, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 123, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 124, "AMOUNT": 5, "CHANCE": 1},
+            {"ITEM_ID": 126, "AMOUNT": 5, "CHANCE": 1}
+        ]
+    },
+
+    "SCIFI_PACK":
+    {
+        "NAME": "Sci-Fi Pack",
+        "DESCRIPTION": "Step into the future.",
+        "PRICE": 1000,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 10,
+        "LOOT_POOL": [
+            {"ITEM_ID": 136, "AMOUNT": 5, "CHANCE": 8},
+            {"ITEM_ID": 137, "AMOUNT": 5, "CHANCE": 8},
+            {"ITEM_ID": 139, "AMOUNT": 5, "CHANCE": 8},
+            {"ITEM_ID": 140, "AMOUNT": 5, "CHANCE": 8},
+            {"ITEM_ID": 134, "AMOUNT": 5, "CHANCE": 8},
+            {"ITEM_ID": 135, "AMOUNT": 5, "CHANCE": 8},
+            {"ITEM_ID": 147, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 148, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 154, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 155, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 149, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 133, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 150, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 151, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    },
+
+    "SHOVEL":
+    {
+        "NAME": "Shovel",
+        "DESCRIPTION": "Go and dig for some treasure!",
+        "PRICE": 4000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 13,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 132, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    },
+
+    "BLUE_DRAGONFLY_WINGS":
+    {
+        "NAME": "Blue Neon Dragonfly Wings",
+        "DESCRIPTION": "Wow, they're blue!",
+        "PRICE": 15000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 14,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 156, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    },
+
+    "ORANGE_DRAGONFLY_WINGS":
+    {
+        "NAME": "Orange Neon Dragonfly Wings",
+        "DESCRIPTION": "Wow, they're orange!",
+        "PRICE": 15000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 15,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 157, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    },
+
+    "KNIGHT_PACK":
+    {
+        "NAME": "Knight Pack",
+        "DESCRIPTION": "Become a knight!",
+        "PRICE": 12000,
+        "ITEM_AMOUNT": 5,
+        "FRAME": 12,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 114, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 115, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 116, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 117, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 118, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 119, "AMOUNT": 1, "CHANCE": 1}
+        ],
+        "SET_POOL": true
+    },
+
+    "LEGENDS_PACK":
+    {
+        "NAME": "Legends Pack",
+        "DESCRIPTION": "",
+        "PRICE": 1500,
+        "ITEM_AMOUNT": 2,
+        "FRAME": 16,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 121, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 63, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 159, "AMOUNT": 1, "CHANCE": 1},
+            {"ITEM_ID": 160, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    },
+    
+    "TV_HEAD":
+    {
+        "NAME": "TV Head",
+        "DESCRIPTION": "'So guys we did it.'",
+        "PRICE": 5000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 11,
+        "LOOT_POOL":
+        [
+            {"ITEM_ID": 153, "AMOUNT": 1, "CHANCE": 1}
+        ]
+    }
+}

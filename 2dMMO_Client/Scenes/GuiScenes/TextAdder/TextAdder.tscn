@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://doo8kkrefvrhg"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_pt4il"]
+[ext_resource type="PackedScene" uid="uid://byyceycgkn1xi" path="res://Scenes/GuiScenes/open_close_animation.tscn" id="2_77bim"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/TextAdder/TextAdder.gd" id="2_l7o7a"]
+
+[node name="TextAdder" type="Control"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.47
+anchor_right = 0.5
+anchor_bottom = 0.47
+offset_left = 41.0
+offset_top = 30.2
+offset_right = 41.0
+offset_bottom = 30.2
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pt4il")
+script = ExtResource("2_l7o7a")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -217.0
+offset_top = -114.0
+offset_right = 136.0
+offset_bottom = 66.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 32.0
+offset_right = 296.0
+offset_bottom = 52.0
+text = "Set Text"
+horizontal_alignment = 1
+
+[node name="Amount" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 68.0
+offset_right = 339.0
+offset_bottom = 100.0
+alignment = 1
+max_length = 256
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 142.0
+offset_right = 124.0
+offset_bottom = 170.0
+focus_mode = 0
+text = "Cancel"
+
+[node name="NextButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 142.0
+offset_right = 345.0
+offset_bottom = 170.0
+focus_mode = 0
+text = "Okay"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("2_77bim")]
+
+[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/NextButton" to="." method="_on_next_button_pressed"]

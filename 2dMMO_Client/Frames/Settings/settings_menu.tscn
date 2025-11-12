@@ -1,0 +1,136 @@
+[gd_scene load_steps=5 format=3 uid="uid://f4eryvarucyb"]
+
+[ext_resource type="Script" path="res://Frames/Settings/settings_menu.gd" id="1_bcdf5"]
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_d803n"]
+[ext_resource type="PackedScene" uid="uid://57kdei6jtv5o" path="res://Scenes/GuiScenes/Blueprints/Animation.tscn" id="2_u53ks"]
+[ext_resource type="AudioStream" uid="uid://0a38y27fh58p" path="res://Assets/Audio/Music/lakeside trees.wav" id="4_bqm54"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(480, 270)
+script = ExtResource("1_bcdf5")
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("2_u53ks")]
+autoplay = "open"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_d803n")
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="FullscreenButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_d803n")
+toggle_mode = true
+text = "Fullscreen"
+
+[node name="VsyncButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_d803n")
+toggle_mode = true
+text = "vSync"
+
+[node name="BorderlessButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_d803n")
+toggle_mode = true
+text = "Borderless"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="GameVolumeTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_d803n")
+text = "Game Volume"
+horizontal_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PeerVolumeTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_d803n")
+text = "Peer Volume"
+horizontal_alignment = 1
+
+[node name="PeerVolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MusicVolumeTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_d803n")
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_d803n")
+toggle_mode = true
+text = "Close Settings"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_bqm54")
+volume_db = -15.0
+autoplay = true
+max_distance = 50000.0
+bus = &"Music"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer3/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer3/VsyncButton" to="." method="_on_vsync_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer3/BorderlessButton" to="." method="_on_borderless_button_pressed"]
+[connection signal="drag_ended" from="VBoxContainer/HBoxContainer/VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_drag_ended"]
+[connection signal="drag_ended" from="VBoxContainer/HBoxContainer/VBoxContainer/PeerVolumeSlider" to="." method="_on_peer_slider_drag_ended"]
+[connection signal="drag_ended" from="VBoxContainer/HBoxContainer/VBoxContainer/MusicSlider" to="." method="_on_music_slider_drag_ended"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer2/CloseButton" to="." method="_on_close_button_pressed"]

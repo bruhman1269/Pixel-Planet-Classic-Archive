@@ -1,0 +1,23 @@
+{
+
+    "Bhutan's Quest":
+    {
+        "REWARD": {
+            "items": [190, 1]
+        },
+
+        "STEPS": [
+            {
+            
+                "1": {
+                  "description": "Spread the word of winter",
+                  "OBJECTIVE": "500",
+                  "ACTION": "PLACE",
+                  ""   
+            }
+
+            }
+        ]
+
+    }
+}

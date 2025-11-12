@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://befouuh2ga35r"]
+
+[ext_resource type="Script" path="res://Particles/RarityExplode/rarity_explode.gd" id="1_4lfmu"]
+
+[sub_resource type="Curve" id="Curve_lg04w"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="RarityExplode" type="CPUParticles2D"]
+emitting = false
+amount = 50
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.63
+initial_velocity_max = 52.08
+radial_accel_max = 14.58
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_lg04w")
+script = ExtResource("1_4lfmu")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

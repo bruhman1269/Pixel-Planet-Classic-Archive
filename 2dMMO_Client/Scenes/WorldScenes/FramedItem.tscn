@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxubu66irdfm"]
+
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="1_bhhkm"]
+[ext_resource type="Script" path="res://Scenes/WorldScenes/framed_item.gd" id="2_knk8v"]
+
+[node name="ItemSprite" type="Sprite2D"]
+position = Vector2(16, 16)
+texture = ExtResource("1_bhhkm")
+hframes = 32
+vframes = 11
+script = ExtResource("2_knk8v")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://bq51q2hmskpia"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_xwnix"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Rewards/RewardSlot.gd" id="2_ypyk3"]
+[ext_resource type="Texture2D" uid="uid://dkilewxne7u4q" path="res://Assets/Gui/shop/reward-slot.png" id="3_alqwa"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="4_mxfhw"]
+[ext_resource type="FontFile" uid="uid://daaceucur7wcw" path="res://Assets/Fonts/Pixeled.ttf" id="5_lesra"]
+[ext_resource type="Texture2D" uid="uid://b4cjp16m775bl" path="res://Assets/Gui/shop/cover.png" id="6_0bhyk"]
+[ext_resource type="AudioStream" uid="uid://bt4k825nbxtxb" path="res://Assets/Audio/Shop/shop_cardflip.ogg" id="7_dsxk5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q4vuo"]
+font_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="RewardSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -904.0
+offset_bottom = -483.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xwnix")
+script = ExtResource("2_ypyk3")
+
+[node name="Slot" type="Sprite2D" parent="."]
+position = Vector2(28, 29)
+texture = ExtResource("3_alqwa")
+
+[node name="ItemIcon" type="Sprite2D" parent="."]
+position = Vector2(29, 29)
+scale = Vector2(1.125, 1.0625)
+texture = ExtResource("4_mxfhw")
+hframes = 32
+vframes = 11
+
+[node name="ItemAmount" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 48.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("5_lesra")
+theme_override_font_sizes/font_size = 5
+text = "sdfsdf"
+label_settings = SubResource("LabelSettings_q4vuo")
+horizontal_alignment = 1
+
+[node name="ItemCover" type="Sprite2D" parent="."]
+position = Vector2(29, 29)
+scale = Vector2(1.056, 1.04178)
+texture = ExtResource("6_0bhyk")
+
+[node name="Reward" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 56.0
+offset_bottom = 57.0
+focus_mode = 0
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dsxk5")
+volume_db = -10.0
+
+[connection signal="pressed" from="Reward" to="." method="_on_reward_pressed"]

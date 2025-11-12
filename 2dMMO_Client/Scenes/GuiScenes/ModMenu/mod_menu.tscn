@@ -1,0 +1,152 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2e0ghsbw52il"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_0ayc8"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/ModMenu/mod_menu.gd" id="2_1ddrt"]
+
+[node name="ModMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0ayc8")
+script = ExtResource("2_1ddrt")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.0
+offset_top = -171.0
+offset_right = 234.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0ayc8")
+
+[node name="LogsButton" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 2
+offset_left = 18.0
+offset_top = 29.0
+offset_right = 118.0
+offset_bottom = 61.0
+text = "Logs"
+
+[node name="CommandsButton" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 2
+offset_left = 18.0
+offset_top = 66.0
+offset_right = 118.0
+offset_bottom = 98.0
+text = "Commands"
+
+[node name="DevToolsButton" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 2
+offset_left = 18.0
+offset_top = 254.0
+offset_right = 118.0
+offset_bottom = 286.0
+text = "Dev Tools"
+
+[node name="Close" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 130.0
+offset_right = 50.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Close"
+
+[node name="Divider" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 128.0
+offset_right = 376.0
+offset_bottom = 385.0
+color = Color(1, 1, 1, 0.145098)
+
+[node name="Tabs" type="Control" parent="."]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Logs" type="Control" parent="Tabs"]
+layout_mode = 1
+anchor_right = 24.0
+anchor_bottom = 13.5
+offset_right = -22080.0
+offset_bottom = -6750.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LogInput" type="LineEdit" parent="Tabs/Logs"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -122.0
+offset_right = 173.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Tabs/Logs"]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 128.0
+offset_right = 653.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0.913725, 0.913725, 0.913725, 1)
+text = "Player name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Tabs/Logs"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -85.0
+offset_right = 108.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Search"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tabs/Logs"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 231.0
+offset_right = 648.0
+offset_bottom = 373.0
+
+[node name="ColorRect" type="ColorRect" parent="Tabs/Logs"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 238.0
+offset_right = 692.0
+offset_bottom = 382.0
+color = Color(0.317647, 0.317647, 0.317647, 1)

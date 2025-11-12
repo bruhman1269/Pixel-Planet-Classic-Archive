@@ -1,0 +1,110 @@
+{
+
+    "BLOCK_PACK":
+    {
+        "NAME": "Block Pack",
+        "DESCRIPTION": "This pack contains five random blocks!",
+        "PRICE": 500,
+        "ITEM_AMOUNT": 5, 
+        "FRAME": 3
+    },
+
+    "WINTER_PACK":
+    {
+        "NAME": "Winter Pack",
+        "DESCRIPTION": "Brrrr!",
+        "PRICE": 4000,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 19
+    },
+
+    "TEST_CLOTHES_PACK":
+    {
+        "NAME": "Clothes Pack",
+        "DESCRIPTION": "Four random clothes!",
+        "PRICE": 500,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 8
+    },
+    
+    "ANGELIC_WINGS":
+    {
+        "NAME": "Angelic Wings",
+        "DESCRIPTION": "Allows flight!",
+        "PRICE": 10000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 9
+    },
+
+    "VAPORWAVE_PACK":
+    {
+        "NAME": "Vaporwave Pack",
+        "DESCRIPTION": "Get ready for the future (or past)!",
+        "PRICE": 1000,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 4
+    },
+
+    "SCIFI_PACK":
+    {
+        "NAME": "Sci-Fi Pack",
+        "DESCRIPTION": "Step into the future.",
+        "PRICE": 1000,
+        "ITEM_AMOUNT": 4,
+        "FRAME": 10
+    },
+
+    "SHOVEL":
+    {
+        "NAME": "Shovel",
+        "DESCRIPTION": "Go and dig for some treasure!",
+        "PRICE": 4000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 13
+    },
+
+    "BLUE_DRAGONFLY_WINGS":
+    {
+        "NAME": "Blue Neon Dragonfly Wings",
+        "DESCRIPTION": "Wow, they're blue!",
+        "PRICE": 15000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 14
+    },
+
+    "ORANGE_DRAGONFLY_WINGS":
+    {
+        "NAME": "Orange Neon Dragonfly Wings",
+        "DESCRIPTION": "Wow, they're orange!",
+        "PRICE": 15000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 15
+    },
+
+    "KNIGHT_PACK":
+    {
+        "NAME": "Knight Pack",
+        "DESCRIPTION": "Become a knight!",
+        "PRICE": 12000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 12
+    },
+
+    "LEGENDS_PACK":
+    {
+        "NAME": "Legends Pack",
+        "DESCRIPTION": "",
+        "PRICE": 1500,
+        "ITEM_AMOUNT": 2,
+        "FRAME": 16
+    },
+    
+    "TV_HEAD":
+    {
+        "NAME": "TV Head",
+        "DESCRIPTION": "'So guys we did it.'",
+        "PRICE": 5000,
+        "ITEM_AMOUNT": 1,
+        "FRAME": 11
+    }
+}

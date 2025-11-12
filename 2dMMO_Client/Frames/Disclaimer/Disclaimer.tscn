@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq8yfj2qf5ufd"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_kotm0"]
+[ext_resource type="Script" path="res://Frames/Disclaimer/Disclaimer.gd" id="2_wu007"]
+[ext_resource type="Texture2D" uid="uid://ba0f43yyknuis" path="res://Assets/Sprites/Backgrounds/space background.png" id="3_uq6wi"]
+[ext_resource type="Texture2D" uid="uid://cme36b6m2os3v" path="res://Assets/Sprites/Backgrounds/blackborders.png" id="4_6c8kx"]
+
+[node name="Disclaimer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kotm0")
+script = ExtResource("2_wu007")
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(512, 270)
+texture = ExtResource("3_uq6wi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.5
+offset_top = -131.0
+offset_right = 222.5
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kotm0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = -107.0
+offset_right = 208.5
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "
+[center]DISCLAIMER![/center]
+[center]
+All items, currencies, and progression accumulated in this demo will not be transferred to Stellaria. All items, currencies, and progression from this demo may be wiped at any time and without warning. This demo is partially a work in progress so expect bugs and glitches.
+"
+
+[node name="AgreeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = 91.0
+offset_right = 49.5
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+disabled = true
+text = "Agree"
+
+[node name="Blackborders" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(480, 270)
+texture = ExtResource("4_6c8kx")
+
+[node name="CloseButton" type="Button" parent="."]
+z_index = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.5
+offset_top = -46.0
+offset_right = 45.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Close"
+
+[node name="DisclaimerTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="pressed" from="AgreeButton" to="." method="_on_agree_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="timeout" from="DisclaimerTimer" to="." method="_on_disclaimer_timer_timeout"]

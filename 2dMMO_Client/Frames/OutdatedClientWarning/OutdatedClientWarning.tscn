@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://5xitg860aatk"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_jftrf"]
+[ext_resource type="Script" path="res://Frames/Disclaimer/Disclaimer.gd" id="2_rmpmw"]
+[ext_resource type="Texture2D" uid="uid://ba0f43yyknuis" path="res://Assets/Sprites/Backgrounds/space background.png" id="3_ofudg"]
+[ext_resource type="Texture2D" uid="uid://cme36b6m2os3v" path="res://Assets/Sprites/Backgrounds/blackborders.png" id="4_544qh"]
+
+[node name="TOS" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jftrf")
+script = ExtResource("2_rmpmw")
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(512, 270)
+texture = ExtResource("3_ofudg")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 197.0
+offset_right = 659.0
+offset_bottom = 343.0
+theme = ExtResource("1_jftrf")
+
+[node name="RichTextLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 328.0
+offset_bottom = 95.0
+text = "You are using an outdated version of the client. Please install the most recent version of the client, which can be found in the Discord server."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Blackborders" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(480, 270)
+texture = ExtResource("4_544qh")
+
+[node name="CloseButton" type="Button" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 444.0
+offset_top = 493.0
+offset_right = 535.0
+offset_bottom = 524.0
+text = "Close"
+
+[node name="DiscordButton" type="Button" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 409.0
+offset_top = 302.0
+offset_right = 569.0
+offset_bottom = 333.0
+focus_mode = 0
+text = "Open Discord Invite Link"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="DiscordButton" to="." method="_on_discord_button_pressed"]

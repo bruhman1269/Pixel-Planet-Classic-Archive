@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://cofajv3vlh2wl"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_bw7me"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/ClaimPlanet/claim_planet.gd" id="2_jymmi"]
+[ext_resource type="PackedScene" uid="uid://57kdei6jtv5o" path="res://Scenes/GuiScenes/Blueprints/Animation.tscn" id="2_qi8cy"]
+
+[node name="ClaimPlanet" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+theme = ExtResource("1_bw7me")
+script = ExtResource("2_jymmi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -191.0
+offset_top = -92.0
+offset_right = 191.0
+offset_bottom = 100.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 372.0
+offset_bottom = 135.0
+theme_override_constants/line_spacing = -5
+text = "Would you like to claim this planet?
+It will cost 1,500 bits and will make you the owner of the planet.
+
+This means only you and people you designate can have access to place/break blocks in your planet. You will also get access to alter the settings of your planet."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ClaimPlanetButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 153.0
+offset_right = 374.0
+offset_bottom = 181.0
+theme = ExtResource("1_bw7me")
+text = "Claim"
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 153.0
+offset_right = 109.0
+offset_bottom = 181.0
+theme = ExtResource("1_bw7me")
+text = "Cancel
+"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("2_qi8cy")]
+
+[connection signal="pressed" from="Panel/ClaimPlanetButton" to="." method="_on_claim_planet_button_pressed"]
+[connection signal="pressed" from="Panel/CancelButton" to="." method="_on_cancel_button_pressed"]

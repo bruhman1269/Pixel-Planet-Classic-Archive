@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfj3s8a4kfk52"
+path="res://.godot/imported/daydreaming on the nebula.wav-3c22109dc68c3b35d9acba2699c0e0c1.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/daydreaming on the nebula.wav"
+dest_files=["res://.godot/imported/daydreaming on the nebula.wav-3c22109dc68c3b35d9acba2699c0e0c1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

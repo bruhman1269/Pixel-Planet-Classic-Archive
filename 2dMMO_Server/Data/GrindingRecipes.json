@@ -1,0 +1,92 @@
+[
+    {
+        "INGREDIENT": [50, 1],
+        "RESULT": [167, 2]
+    },
+
+    {
+        "INGREDIENT": [21, 1],
+        "RESULT": [167, 2]
+    },
+
+    {
+        "INGREDIENT": [72, 1],
+        "RESULT": [167, 5]
+    },
+
+    {
+        "INGREDIENT": [112, 1],
+        "RESULT": [167, 3]
+    },
+
+    {
+        "INGREDIENT": [156, 1],
+        "RESULT": [167, 1]
+        
+    },
+
+    {
+        "INGREDIENT": [157, 1],
+        "RESULT": [167, 1]
+    },
+
+    {
+        "INGREDIENT": [62, 1],
+        "RESULT": [167, 3]
+    },
+
+    {
+        "INGREDIENT": [166, 1],
+        "RESULT": [167, 5]
+    },
+
+    {
+        "INGREDIENT": [154, 1],
+        "RESULT": [20, 1]
+    },
+
+    {
+        "INGREDIENT": [155, 1],
+        "RESULT": [20, 1]
+    },
+
+    {
+        "INGREDIENT": [162, 1],
+        "RESULT": [119, 1]
+    },
+
+    {
+        "INGREDIENT": [165, 1],
+        "RESULT": [54, 1]
+    },
+
+    {
+        "INGREDIENT": [132, 1],
+        "RESULT": [179, 1]
+    },
+
+    {
+        "INGREDIENT": [173, 1],
+        "RESULT": [180, 1]
+    },
+
+    {
+        "INGREDIENT": [147, 1],
+        "RESULT": [178, 1]
+    },
+
+    {
+        "INGREDIENT": [148, 1],
+        "RESULT": [178, 1]
+    },
+
+    {
+        "INGREDIENT": [160, 1],
+        "RESULT": [178, 1]
+    },
+
+    {
+        "INGREDIENT": [19, 1],
+        "RESULT": [178, 1]
+    }
+]

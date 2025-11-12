@@ -1,0 +1,72 @@
+[gd_resource type="AudioBusLayout" load_steps=7 format=3 uid="uid://bcc0tmwja7wk2"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_jdpiy"]
+resource_name = "Reverb"
+room_size = 0.07
+damping = 0.0
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_gl6lj"]
+resource_name = "LowPassFilter"
+cutoff_hz = 300.0
+resonance = 1.0
+
+[sub_resource type="AudioEffectPhaser" id="AudioEffectPhaser_ghjqk"]
+resource_name = "Phaser"
+rate_hz = 1.91
+
+[sub_resource type="AudioEffectBandLimitFilter" id="AudioEffectBandLimitFilter_k3k1p"]
+resource_name = "BandLimitFilter"
+resonance = 0.84
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_mtysn"]
+resource_name = "Reverb"
+room_size = 0.07
+damping = 0.0
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_kbl5l"]
+resource_name = "LowPassFilter"
+cutoff_hz = 200.0
+
+[resource]
+bus/1/name = &"Game"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/2/name = &"Music"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"Peers"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Master"
+bus/4/name = &"Shockwave"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -10.0692
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectReverb_jdpiy")
+bus/4/effect/0/enabled = true
+bus/4/effect/1/effect = SubResource("AudioEffectLowPassFilter_gl6lj")
+bus/4/effect/1/enabled = true
+bus/4/effect/2/effect = SubResource("AudioEffectPhaser_ghjqk")
+bus/4/effect/2/enabled = true
+bus/4/effect/3/effect = SubResource("AudioEffectBandLimitFilter_k3k1p")
+bus/4/effect/3/enabled = true
+bus/5/name = &"Ambient"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectReverb_mtysn")
+bus/5/effect/0/enabled = true
+bus/5/effect/1/effect = SubResource("AudioEffectLowPassFilter_kbl5l")
+bus/5/effect/1/enabled = true

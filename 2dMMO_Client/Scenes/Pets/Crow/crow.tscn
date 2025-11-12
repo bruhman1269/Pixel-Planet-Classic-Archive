@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://chb0qmpm3vfjf"]
+
+[ext_resource type="Texture2D" uid="uid://ct5u8hd04m4kw" path="res://Assets/Sprites/Pets/raven.png" id="1_saax6"]
+[ext_resource type="Script" path="res://Scenes/Pets/Crow/crow.gd" id="2_gil8q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r2ou"]
+atlas = ExtResource("1_saax6")
+region = Rect2(0, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fnk7"]
+atlas = ExtResource("1_saax6")
+region = Rect2(35, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1lg8"]
+atlas = ExtResource("1_saax6")
+region = Rect2(70, 0, 35, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_admc8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7r2ou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fnk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1lg8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Crow" type="AnimatedSprite2D"]
+position = Vector2(18, 16)
+sprite_frames = SubResource("SpriteFrames_admc8")
+autoplay = "default"
+frame_progress = 0.817348
+script = ExtResource("2_gil8q")

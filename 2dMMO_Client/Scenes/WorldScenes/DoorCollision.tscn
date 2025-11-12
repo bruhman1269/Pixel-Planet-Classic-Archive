@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://duc8y050qmxpw"]
+
+[ext_resource type="Script" path="res://Scenes/WorldScenes/door_area.gd" id="1_gk6bu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5dai"]
+size = Vector2(32, 32)
+
+[node name="DoorCollision" type="StaticBody2D"]
+script = ExtResource("1_gk6bu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_v5dai")
+debug_color = Color(2.26215e-06, 0.641929, 0.326296, 0.42)

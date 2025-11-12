@@ -1,0 +1,1827 @@
+{
+	"0":
+	{
+		"TYPE": "FIST",
+		"NAME": "Fist",
+		"UNSELLABLE": true
+	},
+
+	"1":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Dirt Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "TWO",
+		"TILESET_ID": 0,
+		"CAN_COLLIDE": true
+	},
+
+	"2":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Granite Block",
+		"HARDNESS": 5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 1,
+		"CAN_COLLIDE": true
+	},
+
+	"3":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Bedrock",
+		"HARDNESS": -1,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 3,
+		"CAN_COLLIDE": true
+	},
+
+	"4":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Lava Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 4,
+		"SPECIALTY": "HURT",
+		"CAN_COLLIDE": true
+	},
+
+	"5": {
+		"TYPE": "CLOTHING",
+		"NAME": "White Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "White_Tshirt.png" 
+	},
+
+	"6": {
+		"TYPE": "CLOTHING",
+		"NAME": "White Jeans",
+		"PLACE": "PANTS",
+		"PATH": "White_Jeans.png" 
+	},
+
+	"7": {
+		"TYPE": "CLOTHING",
+		"NAME": "Blue Jeans",
+		"PLACE": "PANTS",
+		"PATH": "Blue_Jeans.png" 
+	},
+
+	"8": {
+		"TYPE": "CLOTHING",
+		"NAME": "Khaki Pants",
+		"PLACE": "PANTS",
+		"PATH": "Khaki_Jeans.png" 
+	},
+
+	"9": {
+		"TYPE": "CLOTHING",
+		"NAME": "Black Jeans",
+		"PLACE": "PANTS",
+		"PATH": "Black_Jeans.png" 
+	},
+
+	"10": {
+		"TYPE": "CLOTHING",
+		"NAME": "Future Kicks",
+		"PLACE": "SHOES",
+		"PATH": "Future_Kicks.png" 
+	},
+
+	"11": {
+		"TYPE": "CLOTHING",
+		"NAME": "Khaki Shorts",
+		"PLACE": "PANTS",
+		"PATH": "Khaki_Shorts.png" 
+	},
+
+	"12":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Gravel Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 7,
+		"CAN_COLLIDE": true
+	},
+
+	"13":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Castle Bricks",
+		"HARDNESS": 4,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 6,
+		"CAN_COLLIDE": true
+	},
+
+	"14":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Cinder Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 8,
+		"CAN_COLLIDE": true
+	},
+
+	"15":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Red Bricks",
+		"HARDNESS": 4,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 5,
+		"CAN_COLLIDE": true
+	},
+
+	"16": {
+		"TYPE": "CLOTHING",
+		"NAME": "Golden Katana",
+		"PLACE": "HAND",
+		"PATH": "Golden_Katana.png",
+		"UNSELLABLE": true
+	},
+
+	"17": {
+		"TYPE": "CLOTHING",
+		"NAME": "Brown Shoes",
+		"PLACE": "SHOES",
+		"PATH": "Brown_Shoes.png"
+	},
+
+	"18": {
+		"TYPE": "CLOTHING",
+		"NAME": "Blue Cap",
+		"PLACE": "HAT",
+		"PATH": "Blue_Clap.png"
+	},
+
+	"19": {
+		"TYPE": "CLOTHING",
+		"NAME": "Dark Robe",
+		"PLACE": "SHIRT",
+		"PATH": "Dark_Robe.png"
+	},
+
+	"20": {
+		"TYPE": "CLOTHING",
+		"NAME": "Dark Hood",
+		"PLACE": "HAIR",
+		"PATH": "Dark_Hood.png"
+	},
+
+	"21": {
+		"TYPE": "CLOTHING",
+		"NAME": "Drakonic Wings",
+		"PLACE": "BACK",
+		"PATH": "Drakonic Wings.png",
+		"SPECIALTY": "FLIGHT",
+		"FLIGHT_TIME": 1.6
+	},
+
+	"22":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Planet Entrance",
+		"HARDNESS": -1,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 2,
+		"CAN_COLLIDE": false
+	},
+
+	"23":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Wooden Platform",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 9,
+		"SPECIALTY": "PLATFORM",
+		"CAN_COLLIDE": false
+	},
+
+	"24":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Pile of Grass",
+		"HARDNESS": 1.5,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 10,
+		"CAN_COLLIDE": false
+	},
+
+	"25":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Bush",
+		"HARDNESS": 1.5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 11,
+		"CAN_COLLIDE": false
+	},
+
+	"26":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Shrub",
+		"HARDNESS": 1.5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 12,
+		"CAN_COLLIDE": false
+	},
+
+	"27":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Workbench",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 13,
+		"SPECIALTY": "CRAFTING",
+		"CAN_COLLIDE": false
+	},
+
+	"28":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Bookshelf",
+		"HARDNESS": 2,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 14,
+		"CAN_COLLIDE": false
+	},
+
+	"29":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Scarecrow",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 15,
+		"CAN_COLLIDE": false,
+		"SPECIALTY": "DECORATION"
+	},
+
+	"30":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Pine Tree",
+		"HARDNESS": 1.5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 16,
+		"CAN_COLLIDE": false
+	},
+
+	"31":
+	{
+		"TYPE": "BACKGROUND",
+		"NAME": "Dirt Background",
+		"HARDNESS": 3,
+		"AUTOTILE": "SIXTEEN",
+		"TILESET_ID": 1
+	},
+
+	"32":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Door",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"SPECIALTY": "DOOR",
+		"DOOR": true,
+		"TILESET_ID": 18,
+		"CAN_COLLIDE": false
+	},
+
+	"33":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Old Sign",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 19,
+		"SPECIALTY": "SIGN",
+		"SIGN": true,
+		"CAN_COLLIDE": false
+	},
+
+	"34":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Rounded Door",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"SPECIALTY": "DOOR",
+		"DOOR": true,
+		"TILESET_ID": 20,
+		"CAN_COLLIDE": false
+	},
+
+	"35":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Spooky Tree",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 21,
+		"CAN_COLLIDE": false,
+		"SPECIALTY": "DECORATION"
+	},
+
+	"36":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Sign",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 22,
+		"SPECIALTY": "SIGN",
+		"SIGN": true,
+		"CAN_COLLIDE": false
+	},
+
+	"37":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Gold Bars",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 17,
+		"CAN_COLLIDE": true
+	},
+
+	"38": {
+		"TYPE": "CLOTHING",
+		"NAME": "Blue Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Blue_Shirt.png" 
+	},
+
+	"39": {
+		"TYPE": "CLOTHING",
+		"NAME": "Green Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Green_Shirt.png" 
+	},
+
+	"40": {
+		"TYPE": "CLOTHING",
+		"NAME": "Brown Hair",
+		"PLACE": "HAIR",
+		"PATH": "Brown_Hair.png" 
+	},
+
+	"41": {
+		"TYPE": "CLOTHING",
+		"NAME": "Red Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Red_Shirt.png" 
+	},
+
+	"42": {
+		"TYPE": "CLOTHING",
+		"NAME": "Purple Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Purple_Shirt.png" 
+	},
+
+	"43": {
+		"TYPE": "CLOTHING",
+		"NAME": "Yellow Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Yellow_Shirt.png" 
+	},
+
+	"44": {
+		"TYPE": "CLOTHING",
+		"NAME": "Orange Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Orange_Shirt.png" 
+	},
+
+	"45": {
+		"TYPE": "CLOTHING",
+		"NAME": "Black Tee-Shirt",
+		"PLACE": "SHIRT",
+		"PATH": "Black_Shirt.png" 
+	},
+
+	"46":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Spooky Ghost",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 23,
+		"CAN_COLLIDE": false,
+		"SPECIALTY": "DECORATION"
+	},
+
+	"47":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Glass Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 24,
+		"CAN_COLLIDE": true
+	},
+
+	"48":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Coarse Sand",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 26,
+		"CAN_COLLIDE": true
+	},
+
+	"49":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Sand",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 25,
+		"CAN_COLLIDE": true
+	},
+
+	"50": {
+		"TYPE": "CLOTHING",
+		"NAME": "Angelic Wings",
+		"PLACE": "BACK",
+		"PATH": "Angelic_Wings.png",
+		"SPECIALTY": "FLIGHT",
+		"FLIGHT_TIME": 1.6
+	},
+
+	"51": {
+		"TYPE": "CLOTHING",
+		"NAME": "Skull Mask",
+		"PLACE": "HAIR",
+		"PATH": "Skull_Mask.png"
+	},
+
+	"52": {
+		"TYPE": "CLOTHING",
+		"NAME": "Skeleton Costume",
+		"PLACE": "SHIRT",
+		"PATH": "Skeleton_Costume.png"
+	},
+
+	"53":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Dungeon Wall Torch",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 29,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+    },
+    
+    "54": {
+        "TYPE": "CLOTHING",
+        "NAME": "Death Sickle",
+        "PLACE": "HAND",
+        "PATH": "death_sickle.png"
+    },
+    
+    "55":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Dungeon Floor Torch",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 30,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+    },
+    
+    "56":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Spooky Candle Variant 1",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 31,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+    },
+    
+    "57":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Pumpkin",
+        "HARDNESS": 2,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 32,
+        "CAN_COLLIDE": false
+    },
+    
+    "58":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Jack-O-Lantern",
+        "HARDNESS": 2,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 33,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+    },
+    
+    "59":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Cobweb",
+        "HARDNESS": 2,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 34,
+        "CAN_COLLIDE": false
+    },
+    
+    "60":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Autumn Leaf Pile",
+        "HARDNESS": 2,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 35,
+        "CAN_COLLIDE": false
+    },
+    
+    "61":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Tombstone Variant 1",
+        "HARDNESS": 4,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 36,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "DECORATION"
+    },
+    
+    "62": {
+        "TYPE": "CLOTHING",
+        "NAME": "Dark Angelic Wings",
+        "PLACE": "BACK",
+        "PATH": "dark_angelic_wings.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 2.0
+    },
+    
+    "63": {
+        "TYPE": "CLOTHING",
+        "NAME": "Half Dreads",
+        "PLACE": "HAIR",
+        "PATH": "half_dreds.png"
+    },
+    
+    "64":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Hanging Chain",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 38,
+        "CAN_COLLIDE": false
+    },
+    
+    "65":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Dungeon Bricks",
+        "HARDNESS": 4,
+        "AUTOTILE": "FOUR",
+        "TILESET_ID": 39,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "DECORATION"
+    },
+    
+    "66":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Spooky Candle Variant 2",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 40,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+    },
+    
+    "67":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Autumn Tree",
+        "HARDNESS": 4,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 41,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "DECORATION"
+    },
+    
+    "68": {
+        "TYPE": "CLOTHING",
+        "NAME": "Pickaxe",
+        "PLACE": "HAND",
+        "PATH": "pickaxe.png",
+        "SPECIALTY": "FAST_BREAK",
+        "BREAK_SPEED_MULT": 1.5
+    },
+    
+    "69":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Tombstone Variant 2",
+        "HARDNESS": 4,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 37,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "DECORATION"
+    },
+    
+    "70":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "CHANDELIER",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 42,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+    },
+    
+    "71": {
+        "TYPE": "CLOTHING",
+        "NAME": "Plague Doctor Mask",
+        "PLACE": "HAIR",
+        "PATH": "plague_doctor_mask.png"
+    },
+
+    "72": {
+        "TYPE": "CLOTHING",
+        "NAME": "Golden Angelic Wings",
+        "PLACE": "BACK",
+        "PATH": "golden_angelic_wings.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 2.0
+    },
+
+    "73":
+    {
+        "TYPE": "BACKGROUND",
+        "NAME": "Gray Brick Backgound",
+        "HARDNESS": 3,
+        "AUTOTILE": "FOUR",
+        "TILESET_ID": 2,
+        "CAN_COLLIDE": false
+    },
+
+    "74":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Steel Platform",
+		"HARDNESS": 4,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 44,
+		"SPECIALTY": "PLATFORM",
+		"CAN_COLLIDE": false
+	},
+
+    "75":
+    {
+        "TYPE": "BACKGROUND",
+        "NAME": "Red Brick Background",
+        "HARDNESS": 3,
+        "AUTOTILE": "FOUR",
+        "TILESET_ID": 9,
+        "CAN_COLLIDE": false
+    },
+
+    "76":
+    {
+        "TYPE": "BACKGROUND",
+        "NAME": "Dungeon Brick Background",
+        "HARDNESS": 3,
+        "AUTOTILE": "FOUR",
+        "TILESET_ID": 3,
+        "CAN_COLLIDE": false
+    },
+
+    "77":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Dungeon Brick Platform",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 47,
+		"SPECIALTY": "PLATFORM",
+		"CAN_COLLIDE": false
+	},
+
+    "78":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Pile of Rocks",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 48,
+        "CAN_COLLIDE": false
+    },
+
+    "79":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Skull Block",
+        "HARDNESS": 4,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 49,
+        "CAN_COLLIDE": true
+    },
+
+    "80":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Fog Machine",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 50,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "DECORATION"
+    },
+
+    "81":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Solar Panel",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 51,
+        "CAN_COLLIDE": false,
+        "SPECIALTY": "DECORATION"
+    },
+
+    "82": {
+        "TYPE": "CLOTHING",
+        "NAME": "Horse Mask",
+        "PLACE": "HAIR",
+        "PATH": "horse_mask.png"
+    },
+
+    "83": {
+        "TYPE": "CLOTHING",
+        "NAME": "Debugger",
+        "PLACE": "HAND",
+        "PATH": "golden_pickaxe.png",
+        "SPECIALTY": "FAST_BREAK",
+        "BREAK_SPEED_MULT": -1
+    },
+
+    "84": {
+        "TYPE": "CLOTHING",
+        "NAME": "Silver Katana",
+        "PLACE": "HAIR",
+        "PATH": "silver_katana.png"
+    },
+    
+    "85": {
+        "TYPE": "CLOTHING",
+        "NAME": "Golden Crown",
+        "PLACE": "HAT",
+        "PATH": "golden_crown.png"
+    },
+
+    "86":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Wooden Entrance",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 52,
+        "CAN_COLLIDE": true,
+        "SPECIALTY": "ENTRANCE"
+    },
+
+    "87": {
+        "TYPE": "CLOTHING",
+        "NAME": "Plague Doctor Costume",
+        "PLACE": "SHIRT",
+        "PATH": "plague_doctor_costume.png"
+    },
+
+    "88":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Gray Brick Platform",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 53,
+		"SPECIALTY": "PLATFORM",
+		"CAN_COLLIDE": false
+	},
+
+    "89":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Red Brick Platform",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 54,
+		"SPECIALTY": "PLATFORM",
+		"CAN_COLLIDE": false
+	},
+
+    "90": {
+        "TYPE": "CLOTHING",
+        "NAME": "Steampunk Goggles",
+        "PLACE": "FACE",
+        "PATH": "steampunk_goggles.png"
+    },
+
+    "91":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Haunted House",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 55,
+		"CAN_COLLIDE": false
+	},
+
+    "92":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Wooden Box",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 56,
+		"CAN_COLLIDE": true
+	},
+
+    "93":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Boombox",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 57,
+		"CAN_COLLIDE": false
+	},
+
+    "94":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "White Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 58,
+		"CAN_COLLIDE": true
+	},
+
+    "95":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Blue Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 59,
+		"CAN_COLLIDE": true
+	},
+
+    "96": {
+        "TYPE": "CLOTHING",
+        "NAME": "Colorblock Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "colorblock_hoodie.png"
+    },
+
+    "97": {
+        "TYPE": "CLOTHING",
+        "NAME": "Black Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "black_hoodie.png"
+    },
+
+    "98": {
+        "TYPE": "CLOTHING",
+        "NAME": "Blue Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "blue_hoodie.png"
+    },
+
+    "99": {
+        "TYPE": "CLOTHING",
+        "NAME": "Designer Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "designer_hoodie.png"
+    },
+
+    "100": {
+        "TYPE": "CLOTHING",
+        "NAME": "Orange Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "orange_hoodie.png"
+    },
+
+    "101": {
+        "TYPE": "CLOTHING",
+        "NAME": "Green Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "green_goodie.png"
+    },
+
+    "102": {
+        "TYPE": "CLOTHING",
+        "NAME": "Yellow and Green Cap",
+        "PLACE": "HAT",
+        "PATH": "yellow_and_green_cap.png"
+    },
+
+    "103": {
+        "TYPE": "CLOTHING",
+        "NAME": "Purple Hoodie",
+        "PLACE": "SHIRT",
+        "PATH": "purple_hoodie.png"
+    },
+
+    "104":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Hay Bale",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 60,
+		"CAN_COLLIDE": false
+	},
+
+    "105":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Cornstalk Variant 1",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 61,
+		"CAN_COLLIDE": false
+	},
+    
+    "106":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Cornstalk Variant 2",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 62,
+		"CAN_COLLIDE": false
+	},
+    
+    "107": {
+        "TYPE": "CLOTHING",
+        "NAME": "Colorblock Pants",
+        "PLACE": "PANTS",
+        "PATH": "colorblock_pants.png"
+    },
+
+    "108":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Emblem Block",
+		"HARDNESS": 4,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 63,
+		"CAN_COLLIDE": false
+	},
+
+    "109": {
+        "TYPE": "CLOTHING",
+        "NAME": "Bone Scythe",
+        "PLACE": "HAND",
+        "PATH": "bone_scythe.png"
+    },
+
+    "110": {
+        "TYPE": "CLOTHING",
+        "NAME": "Jump Mans",
+        "PLACE": "SHOES",
+        "PATH": "jump_mans.png"
+    },
+
+    "111": {
+		"TYPE": "CLOTHING",
+		"NAME": "Bone Wings",
+		"PLACE": "BACK",
+		"SPECIALTY": "FLIGHT",
+		"FLIGHT_TIME": 2.0,
+        "PATH": "bone_wings.png"
+	},
+
+    "112": {
+		"TYPE": "CLOTHING",
+		"NAME": "Bat Wings",
+		"PLACE": "BACK",
+		"SPECIALTY": "FLIGHT",
+		"FLIGHT_TIME": 2.0,
+        "PATH": "bat_wings.png"
+	},
+
+    "113": {
+		"TYPE": "CLOTHING",
+		"NAME": "Striped T-Shirt",
+		"PLACE": "SHIRT",
+        "PATH": "striped_t_shirt.png"
+	},
+
+    "114": {
+		"TYPE": "CLOTHING",
+		"NAME": "Knight Helmet",
+		"PLACE": "HAIR",
+        "PATH": "knight_helmet.png"
+	},
+
+    "115": {
+		"TYPE": "CLOTHING",
+		"NAME": "Knight Gloves",
+		"PLACE": "HAND",
+        "PATH": "knight_gloves.png"
+	},
+
+    "116": {
+		"TYPE": "CLOTHING",
+		"NAME": "Knight Chestplate",
+		"PLACE": "SHIRT",
+        "PATH": "knight_chestplate.png"
+	},
+    
+    "117": {
+		"TYPE": "CLOTHING",
+		"NAME": "Knight Boots",
+		"PLACE": "SHOES",
+        "PATH": "knight_boots.png"
+	},
+
+    "118": {
+		"TYPE": "CLOTHING",
+		"NAME": "Knight Leggings",
+		"PLACE": "PANTS",
+        "PATH": "knight_leggings.png"
+	},
+
+    "119": {
+		"TYPE": "CLOTHING",
+		"NAME": "Excalibur",
+		"PLACE": "HAND",
+        "PATH": "excalibur.png"
+	},
+
+    "120":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Scary Statue",
+		"HARDNESS": 4,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 64,
+		"CAN_COLLIDE": false,
+		"SPECIALTY": "LIGHT"
+	},
+
+    "121": {
+		"TYPE": "CLOTHING",
+		"NAME": "Half Hair",
+		"PLACE": "HAIR",
+        "PATH": "half_hair.png"
+	},
+
+    "122":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Neon Grid Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 65,
+		"CAN_COLLIDE": true
+	},
+
+    "123":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Blue Neon Light",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 66,
+		"CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+	},
+
+    "124":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Pink Neon Light",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 67,
+		"CAN_COLLIDE": false,
+        "SPECIALTY": "LIGHT"
+	},
+
+    "125":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Pink Palm Tree",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 68,
+		"CAN_COLLIDE": false 
+	},
+
+    "126":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Classic Statue",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 69,
+		"CAN_COLLIDE": false
+	},
+
+    "127":
+	{
+		"TYPE": "BACKGROUND",
+		"NAME": "Neon Grid Background",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 4,
+		"CAN_COLLIDE": true
+	},
+
+    "128":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Blue Forcefield Entrance",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 70,
+        "CAN_COLLIDE": true,
+        "SPECIALTY": "ENTRANCE"
+    },
+
+    "129":
+    {
+        "TYPE": "BLOCK",
+        "NAME": "Pink Forcefield Entrance",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 71,
+        "CAN_COLLIDE": true,
+        "SPECIALTY": "ENTRANCE"
+    },
+
+    "130":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Blue Palm Tree",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 72,
+		"CAN_COLLIDE": false
+	},
+
+    "131":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Item Frame",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 73,
+		"CAN_COLLIDE": false,
+        "SPECIALTY": "DISPLAY"
+	},
+
+    "132": {
+        "TYPE": "CLOTHING",
+        "NAME": "Shovel",
+        "PLACE": "HAND",
+        "PATH": "shovel.png",
+        "SPECIALTY": "FAST_BREAK",
+        "BREAK_SPEED_MULT": 1.5
+    },
+    
+    "133": {
+        "TYPE": "CLOTHING",
+        "NAME": "Blue Sci-Fi Helmet",
+        "PLACE": "HAIR",
+        "PATH": "blue_scifi_helmet.png"
+    },
+
+    "134":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Orange Neon Grid Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 74,
+		"CAN_COLLIDE": true
+	},
+
+    "135":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Blue Neon Grid Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 75,
+		"CAN_COLLIDE": true
+	},
+
+    "136":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Sci-Fi Terminal",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 76,
+		"CAN_COLLIDE": false,
+        "SPECIALTY": "CRAFTING"
+	},
+
+    "137":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Sci-Fi Sign",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 77,
+		"CAN_COLLIDE": false,
+        "SPECIALTY": "SIGN",
+		"SIGN": true
+	},
+
+    "138": {
+        "TYPE": "CLOTHING",
+        "NAME": "Tragicomic Mask",
+        "PLACE": "FACE",
+        "PATH": "tragicomic_mask.png"
+    },
+
+    "139":
+	{
+		"TYPE": "BACKGROUND",
+		"NAME": "Blue Neon Grid Background",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 5,
+		"CAN_COLLIDE": false
+	},
+
+    "140":
+	{
+		"TYPE": "BACKGROUND",
+		"NAME": "Orange Neon Grid Background",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 6,
+		"CAN_COLLIDE": false
+	},
+
+    "141": {
+        "TYPE": "CLOTHING",
+        "NAME": "Whip",
+        "PLACE": "HAND",
+        "PATH": "whip.png"
+    },
+
+    "142": {
+        "TYPE": "CLOTHING",
+        "NAME": "Kangaroo Mask",
+        "PLACE": "HAIR",
+        "PATH": "kangaroo_mask.png"
+    },
+
+    "143": {
+        "TYPE": "CLOTHING",
+        "NAME": "Winter Scarf",
+        "PLACE": "BACK",
+        "PATH": "winter_scarf.png"
+    },
+
+    "144": {
+        "TYPE": "CLOTHING",
+        "NAME": "Wanderer's Cape",
+        "PLACE": "BACK",
+        "PATH": "wanderers_cape.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 0.4
+    },
+
+    "145":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Wooden Chair",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 78,
+		"CAN_COLLIDE": false,
+		"SPECIALTY": "DECORATION"
+	},
+
+    "146":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Leather Couch",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 79,
+		"CAN_COLLIDE": false
+	},
+
+    "147": {
+        "TYPE": "CLOTHING",
+        "NAME": "Blue Sci-Fi Suit",
+        "PLACE": "SHIRT",
+        "PATH": "blue_scifi_suit.png"
+    },
+
+    "148": {
+        "TYPE": "CLOTHING",
+        "NAME": "Orange Sci-Fi Suit",
+        "PLACE": "SHIRT",
+        "PATH": "orange_scifi_suit.png"
+    },
+
+    "149": {
+        "TYPE": "CLOTHING",
+        "NAME": "Orange Sci-Fi Helmet",
+        "PLACE": "HAIR",
+        "PATH": "orange_scifi_helmet.png"
+    },
+
+    "150": {
+        "TYPE": "CLOTHING",
+        "NAME": "Blue Sci-Fi Disc",
+        "PLACE": "HAND",
+        "PATH": "blue_scifi_disc.png"
+    },
+
+    "151": {
+        "TYPE": "CLOTHING",
+        "NAME": "Orange Sci-Fi Disc",
+        "PLACE": "HAND",
+        "PATH": "orange_scifi_disc.png"
+    },
+
+    "152": {
+        "TYPE": "CLOTHING",
+        "NAME": "Godly Halo",
+        "PLACE": "FACE",
+        "PATH": "godly_halo.png"
+    },
+
+    "153": {
+        "TYPE": "CLOTHING",
+        "NAME": "TV Head",
+        "PLACE": "HAIR",
+        "PATH": "tv_head.png"
+    },
+    
+    "154": {
+        "TYPE": "CLOTHING",
+        "NAME": "Blue Sci-Fi Hood",
+        "PLACE": "HAIR",
+        "PATH": "blue_scifi_hood.png"
+    },
+
+    "155": {
+        "TYPE": "CLOTHING",
+        "NAME": "Orange Sci-Fi Hood",
+        "PLACE": "HAIR",
+        "PATH": "orange_scifi_hood.png"
+    },
+
+    "156": {
+        "TYPE": "CLOTHING",
+        "NAME": "Blue Neon Dragonfly Wings",
+        "PLACE": "BACK",
+        "PATH": "blue_neon_dragonfly_wings.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 1.5
+    },
+
+    "157": {
+        "TYPE": "CLOTHING",
+        "NAME": "Orange Neon Dragonfly Wings",
+        "PLACE": "BACK",
+        "PATH": "orange_neon_butterfly_wings.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 1.5
+    },
+
+    "158":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Bounce Pad",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 80,
+		"CAN_COLLIDE": true,
+        "SPECIALTY": "BOUNCER"
+	},
+
+    "159": {
+        "TYPE": "CLOTHING",
+        "NAME": "Lxrd Mask",
+        "PLACE": "FACE",
+        "PATH": "lxrd_mask.png"
+    },
+
+    "160": {
+        "TYPE": "CLOTHING",
+        "NAME": "Custom Jacket",
+        "PLACE": "SHIRT",
+        "PATH": "custom_jacket.png"
+    },
+
+    "161": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Golden Soul"
+	},
+
+    "162": {
+		"TYPE": "CLOTHING",
+		"NAME": "Golden Excalibur",
+		"PLACE": "HAND",
+        "PATH": "golden_excalibur.png"
+	},
+
+    "163":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Purple Neon Grid Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 81,
+		"CAN_COLLIDE": true
+	},
+
+    "164":
+	{
+		"TYPE": "BACKGROUND",
+		"NAME": "Purple Neon Grid Background",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 8,
+		"CAN_COLLIDE": false
+	},
+
+    "165": {
+		"TYPE": "CLOTHING",
+		"NAME": "Golden Scythe",
+		"PLACE": "HAND",
+        "PATH": "golden_scythe.png"
+	},
+
+    "166": {
+        "TYPE": "CLOTHING",
+        "NAME": "Phoenix Wings",
+        "PLACE": "BACK",
+        "PATH": "phoenix_wings.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 2.0,
+		"BREAK_VFX": "phoenix_block_break.png",
+		"LAUNCH_VFX": "phoenix_wings_liftoff.png"
+    },
+
+	"167": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Soul of Flight"
+	},
+
+    "168": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Fire Feather"
+	},
+
+	"169": {
+		"TYPE": "BLOCK",
+		"NAME": "Grindstone",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 27,
+		"SPECIALTY": "GRINDING",
+		"CAN_COLLIDE": false
+	},
+
+    "170": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Feather"
+	},
+
+    "171": {
+		"TYPE": "CLOTHING",
+		"NAME": "Oceanic Trident",
+		"PLACE": "HAND",
+        "PATH": "oceanic_trident.png",
+		"BREAK_EFFECT": "",
+		"SWING_SPECIAL_ANIMATION": "OceanicTrident/OceanicTrident.tscn"
+	},
+
+    "172": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Heart of the Sea"
+	},
+
+    "173": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Cobalt Ingot"
+	},
+
+    "174": {
+		"TYPE": "BLOCK",
+		"NAME": "Cobalt Ore",
+		"HARDNESS": 5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 82,
+		"CAN_COLLIDE": true
+	},
+
+    "175": {
+        "TYPE": "CLOTHING",
+        "NAME": "Da Vinci's Makeshift Wings",
+        "PLACE": "BACK",
+        "PATH": "da_vincis_makeshift_wings.png",
+		"LAUNCH_VFX": "da_vinci_wings_liftoff.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 2.5
+    },
+
+    "176": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Broken Trident Handle"
+	},
+
+    "177": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Wing Frame"
+	},
+
+    "178": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Canvas"
+	},
+
+    "179": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Broken Shovel Handle"
+	},
+
+    "180": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Cog"
+	},
+
+	"181": {
+		"TYPE": "BLOCK",
+		"NAME": "Promethium Ore",
+		"HARDNESS": 5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 83,
+		"CAN_COLLIDE": true
+	},
+
+    "182": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Promethium Ingot"
+	},
+
+	"183": {
+		"TYPE": "BLOCK",
+		"NAME": "Dragonite Ore",
+		"HARDNESS": 7,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 84,
+		"CAN_COLLIDE": true
+	},
+
+    "184": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Dragonite"
+	},
+
+	"185": {
+		"TYPE": "BLOCK",
+		"NAME": "Diamond Ore",
+		"HARDNESS": 6,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 85,
+		"CAN_COLLIDE": true
+	},
+
+    "186": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Diamond Ingot"
+	},
+
+    "187": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Dragonite Soul"
+    },
+
+	"188": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Raw Promethium Ingot"
+	},
+
+	"189": {
+		"TYPE": "CLOTHING",
+		"NAME": "Dragonite Dagger",
+		"PLACE": "HAND"
+	},
+
+    "190": {
+        "TYPE": "CLOTHING",
+        "NAME": "Zeus Wings",
+        "PLACE": "BACK",
+        "PATH": "zeus_wings.png",
+        "SPECIALTY": "FLIGHT",
+        "FLIGHT_TIME": 2.0,
+		"BREAK_VFX": "zeus_block_break.png",
+		"LAUNCH_VFX": "zeus_wings_liftoff.png"
+    },
+	
+    "191": {
+        "TYPE": "CLOTHING",
+        "NAME": "Raven Staff",
+        "PLACE": "HAND",
+        "PATH": "raven_staff.png",
+		"BREAK_VFX": "poison_block_break.png",
+		"PET": "res://Scenes/Pets/Crow/crow.tscn"
+    },
+
+	"192": {
+		"TYPE": "BLOCK",
+		"NAME": "Snow Block",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 86,
+		"CAN_COLLIDE": true
+	},
+
+	"193": {
+		"TYPE": "BLOCK",
+		"NAME": "Bhutan",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 87,
+		"CAN_COLLIDE": false,
+		"SPECIALTY": "NPC"
+	},
+
+	"194": {
+		"TYPE": "BLOCK",
+		"NAME": "Snowman",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 88,
+		"CAN_COLLIDE": false
+	},
+
+    "195": {
+		"TYPE": "INGREDIENT",
+		"NAME": "Snowball"
+    },
+
+	"196":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Icy Sign",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 89,
+		"SPECIALTY": "SIGN",
+		"SIGN": true,
+		"CAN_COLLIDE": false
+	},
+
+	"197":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Icicle",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 90,
+		"CAN_COLLIDE": false
+	},
+
+	"198":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Ice Platform",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 91,
+		"SPECIALTY": "PLATFORM",
+		"CAN_COLLIDE": false
+	},
+
+	"199":
+	{
+        "TYPE": "BLOCK",
+        "NAME": "Ice Block",
+        "HARDNESS": 3,
+        "AUTOTILE": "TWO",
+        "TILESET_ID": 92,
+		"CAN_COLLIDE": true
+    },
+
+	"200":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Winter Pine Tree",
+		"HARDNESS": 1.5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 93,
+		"CAN_COLLIDE": false
+	},
+
+	"201":
+	{
+        "TYPE": "BLOCK",
+        "NAME": "Snow Brick Block",
+        "HARDNESS": 3,
+        "AUTOTILE": "NONE",
+        "TILESET_ID": 94,
+		"CAN_COLLIDE": true
+    },
+
+	"202":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Snowy Rock Pile",
+		"HARDNESS": 1.5,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 95,
+		"CAN_COLLIDE": false
+	},
+
+	"203":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Snowflake Decorations",
+		"HARDNESS": 2,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 96,
+		"CAN_COLLIDE": false
+	},
+
+	"204":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Snowy Fence",
+		"HARDNESS": 3,
+		"AUTOTILE": "FOUR",
+		"TILESET_ID": 97,
+        "DROPS": [
+            {"ITEM_ID": -1, "AMOUNT": 0, "CHANCE": 8},
+            {"ITEM_ID": 204, "AMOUNT": 1, "CHANCE": 4},
+            {"ITEM_ID": 204, "AMOUNT": 2, "CHANCE": 3},
+            {"ITEM_ID": 204, "AMOUNT": 3, "CHANCE": 1},
+            {"ITEM_ID": -100, "AMOUNT": 5, "CHANCE": 1}
+        ],
+		"CAN_COLLIDE": false
+	},
+
+	"205":
+	{
+		"TYPE": "BLOCK",
+		"NAME": "Festive Lights",
+		"HARDNESS": 3,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 98,
+		"CAN_COLLIDE": false
+	},
+
+	"206": {
+		"TYPE": "CLOTHING",
+		"NAME": "Krampus Head",
+		"PLACE": "HAIR",
+		"PATH": "krampus_head.png" 
+	},
+
+	"207": {
+		"TYPE": "CLOTHING",
+		"NAME": "Krampus Robe",
+		"PLACE": "SHIRT",
+		"PATH": "krampus_suit.png" 
+	},
+
+
+	"330": {
+		"TYPE": "BLOCK",
+		"NAME": "Biaoqing Block",
+		"HARDNESS": 1,
+		"AUTOTILE": "NONE",
+		"TILESET_ID": 28,
+		"CAN_COLLIDE": true
+	}
+
+}

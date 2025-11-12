@@ -1,0 +1,562 @@
+[gd_scene load_steps=27 format=3 uid="uid://c2vimgu7p1mku"]
+
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="1_53cfk"]
+[ext_resource type="Texture2D" uid="uid://cruqjapladkqx" path="res://Assets/Sprites/VFX/star.png" id="2_bvcfl"]
+[ext_resource type="Texture2D" uid="uid://bi7qp1bavpb4k" path="res://Assets/Sprites/Backgrounds/PlanetBackground.png" id="2_engk5"]
+[ext_resource type="Script" path="res://Frames/WorldMenu/WorldMenu.gd" id="2_fop2b"]
+[ext_resource type="Texture2D" uid="uid://cme36b6m2os3v" path="res://Assets/Sprites/Backgrounds/blackborders.png" id="3_f55fg"]
+[ext_resource type="Texture2D" uid="uid://dqlkmul3tyu4l" path="res://Assets/Gui/Fist.png" id="6_mkqos"]
+[ext_resource type="Texture2D" uid="uid://s7qgfbeil2y6" path="res://Assets/Gui/Title.png" id="7_bjx1s"]
+[ext_resource type="Script" path="res://Scenes/GuiScenes/Menu.gd" id="8_amv4v"]
+[ext_resource type="Texture2D" uid="uid://y74ugywwlprt" path="res://Assets/Gui/WorldMenu/buttonICONS.png" id="8_gefig"]
+[ext_resource type="Texture2D" uid="uid://k3qfo7l41te" path="res://Assets/Gui/WorldMenu/OrSeparatorBar.png" id="9_7pad5"]
+[ext_resource type="Texture2D" uid="uid://ccotmonek0eb" path="res://Assets/Gui/itemsNEW.png" id="10_y8af8"]
+[ext_resource type="PackedScene" uid="uid://f4eryvarucyb" path="res://Frames/Settings/settings_menu.tscn" id="11_130vu"]
+[ext_resource type="AudioStream" uid="uid://dandhoicrlq5b" path="res://Assets/Audio/Music/wintertheme.ogg" id="13_lh0ww"]
+[ext_resource type="Script" path="res://Frames/World/Notifications.gd" id="13_swpaw"]
+
+[sub_resource type="Animation" id="Animation_c7rwn"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(480, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(56.25, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_8mdyu"]
+resource_name = "menu"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(480, -0.25, 0, 0.25, 0, 480, -0.25, 0, 0.25, 0, 480, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(56.25, -0.25, 0, 0.25, 0, 75, -0.25, 0, 0.25, 0, 56.25, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fb78p"]
+_data = {
+"RESET": SubResource("Animation_c7rwn"),
+"menu": SubResource("Animation_8mdyu")
+}
+
+[sub_resource type="Curve" id="Curve_2wyuh"]
+min_value = 0.01
+_data = [Vector2(0, 0.01), 0.0, 0.0, 0, 0, Vector2(1, 0.298), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ar14k"]
+curve = SubResource("Curve_2wyuh")
+
+[sub_resource type="Curve" id="Curve_tldsv"]
+_data = [Vector2(0, 0.0090909), 0.0, 0.0, 0, 0, Vector2(0.271084, 1), 0.0, 0.0, 0, 0, Vector2(0.674699, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.281818), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_oxvyf"]
+curve = SubResource("Curve_tldsv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d7k60"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 200.0
+direction = Vector3(1, 1, 0)
+spread = 179.52
+flatness = 0.44
+initial_velocity_min = 0.3
+initial_velocity_max = 0.6
+angular_velocity_min = 1.0
+angular_velocity_max = 10.0
+orbit_velocity_min = 0.01
+orbit_velocity_max = 0.01
+orbit_velocity_curve = SubResource("CurveTexture_ar14k")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_oxvyf")
+
+[sub_resource type="Curve" id="Curve_brq74"]
+min_value = 0.01
+_data = [Vector2(0, 0.136), 0.0, 0.0, 0, 0, Vector2(1, 0.28), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_q4frw"]
+curve = SubResource("Curve_brq74")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o0til"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 200.0
+direction = Vector3(1, 1, 0)
+spread = 179.52
+flatness = 0.44
+initial_velocity_min = 0.1
+initial_velocity_max = 0.2
+angular_velocity_min = 1.0
+angular_velocity_max = 10.0
+orbit_velocity_min = 0.01
+orbit_velocity_max = 0.01
+orbit_velocity_curve = SubResource("CurveTexture_q4frw")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_oxvyf")
+color = Color(0, 0.784314, 1, 0.27451)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_q4wkf"]
+
+[node name="WorldMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(480, 270)
+theme = ExtResource("1_53cfk")
+script = ExtResource("2_fop2b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fb78p")
+}
+autoplay = "menu"
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(480.05, 270)
+scale = Vector2(0.376875, 0.375)
+texture = ExtResource("2_engk5")
+
+[node name="SpaceBackground2" type="Sprite2D" parent="."]
+position = Vector2(480.05, 270)
+scale = Vector2(0.376875, 0.375)
+
+[node name="Particles" type="Node" parent="."]
+
+[node name="WhiteStars" type="GPUParticles2D" parent="Particles"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(463, 268)
+scale = Vector2(5.11629, 2.64)
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_d7k60")
+texture = ExtResource("2_bvcfl")
+lifetime = 11.44
+speed_scale = 0.44
+randomness = 0.44
+fixed_fps = 0
+
+[node name="BlueStars" type="GPUParticles2D" parent="Particles"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(463, 268)
+scale = Vector2(5.11629, 2.64)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_o0til")
+texture = ExtResource("2_bvcfl")
+lifetime = 11.44
+speed_scale = 0.44
+randomness = 0.44
+fixed_fps = 0
+
+[node name="Blackborders" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(480, 270)
+texture = ExtResource("3_f55fg")
+
+[node name="Fist" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(29, 31)
+scale = Vector2(1.34375, 1.34375)
+texture = ExtResource("6_mkqos")
+
+[node name="Title" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(480, 56.25)
+scale = Vector2(1.0375, 1.0375)
+texture = ExtResource("7_bjx1s")
+
+[node name="LoginStatusLabel" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 54.0
+offset_top = 20.0
+offset_right = 348.0
+offset_bottom = 43.0
+text = "Login Status"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 494.0
+offset_right = 251.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 20
+text = "Alpha Version 1.0
+Original Game by RaoK, Adam, & 8Bit"
+
+[node name="Label3" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 709.0
+offset_top = 494.0
+offset_right = 955.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 20
+text = "Godot 4 Port by Walid
+Godot 3 Remake by Sundae and Walid"
+horizontal_alignment = 2
+
+[node name="Menu" type="Control" parent="."]
+z_index = 2
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 107.0
+offset_right = 343.0
+offset_bottom = 412.0
+script = ExtResource("8_amv4v")
+
+[node name="PlanetsButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 26.0
+offset_right = 201.0
+offset_bottom = 58.0
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_q4wkf")
+text = "Planets"
+
+[node name="ItemPicture2" type="Sprite2D" parent="Menu/PlanetsButton"]
+position = Vector2(28, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("10_y8af8")
+hframes = 32
+vframes = 11
+frame = 206
+
+[node name="ShopButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 74.0
+offset_right = 233.0
+offset_bottom = 106.0
+focus_mode = 0
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_q4wkf")
+text = "Shop
+"
+
+[node name="NewsButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 122.0
+offset_right = 201.0
+offset_bottom = 154.0
+focus_mode = 0
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_q4wkf")
+text = "News"
+
+[node name="AccountButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 170.0
+offset_right = 233.0
+offset_bottom = 202.0
+focus_mode = 0
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_q4wkf")
+text = "Account
+"
+
+[node name="SettingsButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 218.0
+offset_right = 201.0
+offset_bottom = 250.0
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_q4wkf")
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 266.0
+offset_right = 234.0
+offset_bottom = 298.0
+focus_mode = 0
+text = "Close
+"
+
+[node name="Tabs" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlanetTab" type="Control" parent="Tabs"]
+z_index = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemPicture2" type="Sprite2D" parent="Tabs/PlanetTab"]
+position = Vector2(722, 136)
+scale = Vector2(2, 2)
+texture = ExtResource("10_y8af8")
+hframes = 32
+vframes = 11
+frame = 265
+
+[node name="WorldNameEdit" type="LineEdit" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 164.0
+offset_right = 754.0
+offset_bottom = 192.0
+placeholder_text = "Enter a planet name"
+alignment = 1
+max_length = 32
+context_menu_enabled = false
+
+[node name="DiveInButton" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 199.0
+offset_right = 606.0
+offset_bottom = 227.0
+focus_mode = 0
+text = "Dive In"
+
+[node name="PromotedPlanetButton" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 303.0
+offset_right = 754.0
+offset_bottom = 331.0
+focus_mode = 0
+disabled = true
+text = "  There are no promoted planets."
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Tabs/PlanetTab/PromotedPlanetButton"]
+position = Vector2(133, 14)
+texture = ExtResource("8_gefig")
+hframes = 4
+frame = 3
+
+[node name="FavoritePlanetButton" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 343.0
+offset_right = 754.0
+offset_bottom = 371.0
+focus_mode = 0
+disabled = true
+text = "Favorite Planet: None"
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Tabs/PlanetTab/FavoritePlanetButton"]
+position = Vector2(133, 14)
+texture = ExtResource("8_gefig")
+hframes = 4
+frame = 2
+
+[node name="RecentPlanetButton" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 383.0
+offset_right = 754.0
+offset_bottom = 411.0
+focus_mode = 0
+disabled = true
+text = "Recent Planet: None"
+text_overrun_behavior = 1
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Tabs/PlanetTab/RecentPlanetButton"]
+position = Vector2(133, 14)
+texture = ExtResource("8_gefig")
+hframes = 4
+frame = 1
+
+[node name="HubButton" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 423.0
+offset_right = 754.5
+offset_bottom = 451.0
+focus_mode = 0
+text = "HUB"
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Tabs/PlanetTab/HubButton"]
+position = Vector2(133, 15)
+texture = ExtResource("8_gefig")
+hframes = 4
+
+[node name="BhutansMountainButton" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 262.0
+offset_right = 754.0
+offset_bottom = 290.0
+focus_mode = 0
+text = "Bhutan's Mountain"
+icon_alignment = 1
+
+[node name="ItemPicture" type="Sprite2D" parent="Tabs/PlanetTab/BhutansMountainButton"]
+position = Vector2(16, 12)
+texture = ExtResource("10_y8af8")
+flip_h = true
+hframes = 32
+vframes = 11
+frame = 194
+
+[node name="ItemPicture2" type="Sprite2D" parent="Tabs/PlanetTab/BhutansMountainButton"]
+position = Vector2(228, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("10_y8af8")
+flip_h = true
+hframes = 32
+vframes = 11
+frame = 206
+
+[node name="EnterWorldButton2" type="Button" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 199.0
+offset_right = 754.0
+offset_bottom = 227.0
+focus_mode = 0
+disabled = true
+text = "Join"
+
+[node name="Label" type="Label" parent="Tabs/PlanetTab"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 141.0
+offset_right = 768.0
+offset_bottom = 164.0
+text = "Planet Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="OrSeparatorBar" type="Sprite2D" parent="Tabs/PlanetTab"]
+position = Vector2(626, 246)
+texture = ExtResource("9_7pad5")
+
+[node name="SettingsTab" type="Control" parent="Tabs"]
+visible = false
+z_index = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="SettingsMenu" parent="Tabs/SettingsTab" instance=ExtResource("11_130vu")]
+layout_mode = 1
+offset_left = 607.0
+offset_top = 258.0
+offset_right = 607.0
+offset_bottom = 258.0
+
+[node name="CloseButton" parent="Tabs/SettingsTab/SettingsMenu/VBoxContainer/HBoxContainer/VBoxContainer2" index="0"]
+visible = false
+
+[node name="AudioStreamPlayer" parent="Tabs/SettingsTab/SettingsMenu" index="2"]
+stream = null
+autoplay = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_lh0ww")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Notifications" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -270.0
+offset_bottom = 270.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("13_swpaw")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Notifications"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.424
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0480347
+offset_bottom = -142.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[connection signal="pressed" from="Menu/PlanetsButton" to="." method="_on_planets_button_pressed"]
+[connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Menu/QuitButton" to="Menu" method="_on_quit_button_pressed"]
+[connection signal="text_changed" from="Tabs/PlanetTab/WorldNameEdit" to="." method="_on_world_name_edit_text_changed"]
+[connection signal="pressed" from="Tabs/PlanetTab/DiveInButton" to="." method="_on_dive_in_button_pressed"]
+[connection signal="pressed" from="Tabs/PlanetTab/PromotedPlanetButton" to="." method="_on_promoted_planet_button_pressed"]
+[connection signal="pressed" from="Tabs/PlanetTab/FavoritePlanetButton" to="." method="_on_favorite_planet_button_pressed"]
+[connection signal="pressed" from="Tabs/PlanetTab/RecentPlanetButton" to="." method="_on_recent_planet_button_pressed"]
+[connection signal="pressed" from="Tabs/PlanetTab/HubButton" to="." method="_on_hub_button_pressed"]
+[connection signal="pressed" from="Tabs/PlanetTab/BhutansMountainButton" to="." method="_on_bhutans_mountain_button_pressed"]
+[connection signal="pressed" from="Tabs/PlanetTab/EnterWorldButton2" to="." method="_on_enter_world_button_2_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+
+[editable path="Tabs/SettingsTab/SettingsMenu"]

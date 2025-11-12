@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj257d761gdtt"]
+
+[ext_resource type="Script" path="res://Scenes/GuiScenes/GUIBase.gd" id="1_8vkuy"]
+[ext_resource type="PackedScene" uid="uid://57kdei6jtv5o" path="res://Scenes/GuiScenes/Blueprints/Animation.tscn" id="2_k3x0c"]
+
+[node name="GuiBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8vkuy")
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("2_k3x0c")]

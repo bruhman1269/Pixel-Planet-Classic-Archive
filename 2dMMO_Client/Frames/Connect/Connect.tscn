@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7ewiqdllw6kh"]
+
+[ext_resource type="Script" path="res://Frames/Connect/Connect.gd" id="1_4nw1d"]
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="2_8xw1q"]
+
+[node name="Connect" type="Node2D"]
+script = ExtResource("1_4nw1d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2835.0
+offset_top = -1521.0
+offset_right = -1875.0
+offset_bottom = -981.0
+scale = Vector2(7.06, 7.06)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 227.0
+offset_top = 249.0
+offset_right = 743.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8xw1q")
+theme_override_font_sizes/font_size = 40
+text = "Connecting to Server"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="."]
+z_index = 3
+offset_left = 444.0
+offset_top = 493.0
+offset_right = 535.0
+offset_bottom = 524.0
+focus_mode = 0
+theme = ExtResource("2_8xw1q")
+text = "Close"
+
+[node name="ConnectionTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="timeout" from="ConnectionTimer" to="." method="_on_connection_timer_timeout"]

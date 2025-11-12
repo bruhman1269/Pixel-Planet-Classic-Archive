@@ -1,0 +1,144 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmbq6bhsgmnkc"]
+
+[ext_resource type="Script" path="res://Frames/Pause/pause_menu.gd" id="1_av4bv"]
+[ext_resource type="Texture2D" uid="uid://gtnx0ygu7gu3" path="res://Assets/Gui/pause.png" id="1_v83il"]
+[ext_resource type="Theme" uid="uid://c36ywjvt5x7kl" path="res://Assets/GuiThemes/MainTheme.tres" id="2_pqedv"]
+[ext_resource type="Texture2D" uid="uid://c2jldwjs5e46p" path="res://Assets/Gui/GrayStarIcon.png" id="3_r8hs2"]
+[ext_resource type="Texture2D" uid="uid://v417m8ehtm1r" path="res://Assets/Gui/StarIcon.png" id="4_5gje2"]
+[ext_resource type="PackedScene" uid="uid://57kdei6jtv5o" path="res://Scenes/GuiScenes/Blueprints/Animation.tscn" id="6_rjlgw"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(480, 270)
+script = ExtResource("1_av4bv")
+
+[node name="PauseBackground" type="Sprite2D" parent="."]
+position = Vector2(1040, 208)
+texture = ExtResource("1_v83il")
+offset = Vector2(-595, 61)
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 143.0
+offset_right = 528.0
+offset_bottom = 171.0
+theme = ExtResource("2_pqedv")
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 202.0
+offset_right = 625.0
+offset_bottom = 230.0
+theme = ExtResource("2_pqedv")
+text = "Settings"
+
+[node name="RespawnButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 202.0
+offset_right = 433.0
+offset_bottom = 230.0
+theme = ExtResource("2_pqedv")
+text = "Respawn"
+
+[node name="ClaimPlanetButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 255.0
+offset_right = 392.0
+offset_bottom = 283.0
+theme = ExtResource("2_pqedv")
+text = "Claim Planet"
+
+[node name="PlanetMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 255.0
+offset_right = 665.0
+offset_bottom = 283.0
+theme = ExtResource("2_pqedv")
+disabled = true
+text = "Planet Menu"
+
+[node name="Marketplace" type="Button" parent="."]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 310.0
+offset_right = 628.0
+offset_bottom = 338.0
+theme = ExtResource("2_pqedv")
+text = "Marketplace"
+
+[node name="Shop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 310.0
+offset_right = 429.0
+offset_bottom = 338.0
+theme = ExtResource("2_pqedv")
+text = "Shop"
+
+[node name="LeavePlanet" type="Button" parent="."]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 367.0
+offset_right = 529.0
+offset_bottom = 395.0
+theme = ExtResource("2_pqedv")
+text = "Leave Planet"
+
+[node name="FavoriteButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 238.0
+offset_right = 506.0
+offset_bottom = 296.0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("3_r8hs2")
+texture_pressed = ExtResource("4_5gje2")
+stretch_mode = 0
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("6_rjlgw")]
+
+[node name="ModMenuButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 687.0
+offset_top = 255.0
+offset_right = 788.0
+offset_bottom = 283.0
+theme = ExtResource("2_pqedv")
+text = "Mod Menu"
+
+[node name="WorldInfoLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 429.0
+offset_right = 960.0
+offset_bottom = 488.0
+theme = ExtResource("2_pqedv")
+text = "World information here
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="RespawnButton" to="." method="_on_respawn_button_pressed"]
+[connection signal="pressed" from="ClaimPlanetButton" to="." method="_on_claim_planet_button_pressed"]
+[connection signal="pressed" from="PlanetMenu" to="." method="_on_planet_menu_pressed"]
+[connection signal="pressed" from="Marketplace" to="." method="_on_marketplace_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="LeavePlanet" to="." method="_on_leave_planet_pressed"]
+[connection signal="pressed" from="FavoriteButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="ModMenuButton" to="." method="_on_mod_menu_button_pressed"]
